@@ -1,0 +1,4333 @@
+===================同时获取ora_epm_ctg、sso_token:
+
+http://192.168.60.125:19000/workspace/logon
+POST /workspace/logon HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: */*
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/workspace/index.jsp?framed=true
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 117
+DNT: 1
+Connection: keep-alive
+
+sso_username=admin
+sso_password=Passw0rd
+LOCALE_LANGUAGE= 
+rightToLeft= 
+accessibilityMode= 
+themeSelection= 
+
+
+HTTP/1.1 200 OK
+Date: Tue, 04 Dec 2018 12:25:02 GMT
+Server: Oracle-Application-Server-11g
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-Content-Type-Options: nosniff
+X-ORACLE-BPMUI-CSRF: FC092F89D1CAE0F47F17C7D7B38166444269E24C350FDD508BAF73D9103C720A17D9FAED705A2DF78AE48EA2BFC9691EF9525F705960665714DF8FBD085AB1C2
+X-ORACLE-DMS-ECID: 00iqgUZL5N52nJWjLxATOA00015W0032qK
+X-Powered-By: Servlet/2.5 JSP/2.1
+X-SSO-Login-Status: 1
+Set-Cookie: JSESSIONID=DxtZcGypCKQdNl2vnJXWwxG0XL376WcL06Qr59dLMJS6wTq15DTv!-602621212; path=/workspace; HttpOnly
+ORA_EPMWS_User=admin; expires=Thu, 03-Jan-2019 12:25:02 GMT; path=/
+ORA_EPMWS_Locale=en_US; expires=Wed, 04-Dec-2019 12:25:02 GMT; path=/
+ORA_EPMWS_AccessibilityMode=false; expires=Wed, 04-Dec-2019 12:25:02 GMT; path=/
+ORA_EPMWS_ThemeSelection=Skyros; expires=Wed, 04-Dec-2019 12:25:02 GMT; path=/
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=180, max=64
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+Content-Language: en
+
+<?xml version="1.0" encoding="UTF-8"?><BpmResponse type="success"><token><![CDATA[iu5vzkbSczqmBcC/dCVUXAp7jFN+xEtiE0/PaIEfnqt1l2DnD6suwRbIkjSW4KMy/WGpE/y20c8EWHGL3okELANJofAsfsG9N+U5plQtYCfPi59Y397Zmm2J8U5rNGl+dAMtBVHPfnY7xVR7VCwo/UvUqQ+7+ywIytHFjhEeanxY7D92ZEu06ALJv/vE38fiyYQkTB4rOvN9gQJoInVR16J7KRinetemGsulXisFVaAJBWS0dp20K8p9gTurWsRkOevHQT/INDXvaO9CTgJFefacRCOa3WUhQAKUrJskltTfWir6/h8RrJCtXiJercRet38BTwH77VS6rK8uHucxec1PPQzIej/uPKu84cRz5VTiF9KAefv3mSocdlr7p7ZT5O2zy5znUj0RGPlgIMJmwKbXGHybDwDvDz0zG7K0vqkIpO/cCY8FQ6oHbuoK9aVP]]></token><user><![CDATA[admin]]></user><assertertoken><![CDATA[z%2BiOXJMzfUW1kNWLSdTuYtPvc3nYodDsj4qYYsbLjLDAs0wdSPm3ka2QOc7YhqUV]]></assertertoken></BpmResponse>
+
+
+
+===================请求Adf.jsp
+http://192.168.60.125:19000/workspace/modules/com/oracle/workspace/mode/Adf.jsp
+POST /workspace/modules/com/oracle/workspace/mode/Adf.jsp HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: */*
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/workspace/index.jsp?framed=true
+X-ORACLE-BPMUI-CSRF: CDF931DD41230C3C4675B8798084B388BB2A58DC06C38712DB95B161090F1BE707FDDE60B084D1A6B82D351B8B6E445729DD1D69FCE61BADE855744B3034B7DE
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+ora_epm_ctg: rllv9WRMf7cr8G9t9IRYrPu4fB%252FprEQ%252FGXA%252FJZvSwC4rhJEgN8tV4ee%252FVraG4L%252F6
+Content-Length: 629
+DNT: 1
+Connection: keep-alive
+Cookie: JSESSIONID=FfxtcGBJKSX49yf26Jp5vwTxntwNGPCCkmndVbfghLQvk4xzlnQz!-602621212; ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros; ORA_EPMWS_timeZone=-480
+
+
+instance=2
+serverName=Workspace
+resizeContentInterval=2000
+LOCALE_LANGUAGE=en_US
+rightToLeft=false
+accessibilityMode=false
+themeSelection=Skyros
+sso_token=/1raoQxOhB6BYXKbeb6hg5grK/Kgsu6kBItlb1xTDeXp55SVXBl+S6wXPviV1uflY8Bcwx7tqGZZ73eOACtyd2QnSmLYIKDTE+bua64ii+X+vhXV3DECw1sLuR1I/BBXGx4q2kTAxrGAu+quZusZrPQ76ySXz6ewah2+Bl1XpnRZAWhTNxbP5Bpbwkxs3AJrzOu5efrtn/i3t77brc8+Fxq36dpwsW6Yn9Qti4lLZ84MWw0fFlQ3T60VBsn0s7emOxVboiCjukFSckX+HripFed9MVrEQni3VBd0NrgS8xnzyWmlmD4lFWXGXdi78U89H0aowb4rRXbazmoOM8hhOpUt5ktdMVerRAhasUBif2UmXtwSiKAjJGDXBYVzUwQWZJw4+P1sVB5hlgGtx1paWCfioSai9o9vb5gwAmXckSWIMOnQrM2JpSumG7lMH3NC
+
+
+
+HTTP/1.1 200 OK
+Date: Tue, 04 Dec 2018 13:30:18 GMT
+Server: Oracle-Application-Server-11g
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-Content-Type-Options: nosniff
+X-ORACLE-BPMUI-CSRF: CDF931DD41230C3C4675B8798084B388BB2A58DC06C38712DB95B161090F1BE707FDDE60B084D1A6B82D351B8B6E445729DD1D69FCE61BADE855744B3034B7DE
+X-ORACLE-DMS-ECID: 00iqgYCiXk62nJWjLxATOA00015W0033_r
+X-Powered-By: Servlet/2.5 JSP/2.1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=180, max=81
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+Content-Language: en
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Application>
+	<BpmModule id="wksp.mode">
+		<BpmContent/>
+	</BpmModule>
+	<Resources>
+		<Script><![CDATA[
+BpmImport("com.oracle.workspace.roles.RoleVars");
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_MANAGE_PERSONAL_PAGES"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_PERFORM_REPORTS_ACTION"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_WORKSPACE_INSTALLED"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CONSOLIDATION_INSTALLED"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_CONSOLIDATION"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_IMPORT_MSREPORTS"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_PERFORM_CONSOLIDATION_ACTION"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_METRICS"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_IRWC_DOC"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_PUBLISH_JOBS"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_ANALYZER_INSTALLED"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_BIEE_INSTALLED"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_AWB_DIM_EDITOR"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_BROWSE"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_REPORTS_INSTALLED"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_PROVISION_USERS"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_CLASSIC_APPS_ADMIN"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_ANALYZER_RICH_CLIENT"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_CLASSIC_CONSOLIDATION_ADMIN"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_INTELLIGENCE_LICENSED"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_DIRECTORY_MANAGER"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_CLASSIC_PLANNING_ADMIN"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_HPSU_INSTALLED"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_HPS_INSTALLED"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_ANALYZER"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_PERFORM_PLANNING_ACTION"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_METRICS_RICH_CLIENT"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_AWB_INSTALLED"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_PLANNING"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_BIP_INSTALLED"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_HMB_INSTALLED"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_HPM_INSTALLED"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_PERFORM_AWB_ACTION"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_PUBLISH_CONTENT"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_SCORECARDS"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_BIPLUS_USER"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_OPEN_PROFITABILITY"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CAN_CREATE_NEW"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_IR_INSTALLED"] = false;
+com.oracle.workspace.roles.RoleVars["ROLE_CHANGE_MANAGEMENT_INSTALLED"] = true;
+com.oracle.workspace.roles.RoleVars["ROLE_PLANNING_INSTALLED"] = true;
+com.oracle.workspace.roles.RoleVars.ROLENAMES["EXPLORER"] = true;
+
+
+
+
+
+
+BpmImport("com.oracle.workspace.util.HSConstants");
+BpmImport("com.oracle.workspace.bindows.HSBaseContainerHandler");
+
+/**
+ * Handler  associated with the open Application module
+ */
+com.oracle.workspace.mode.Handler = function()
+{
+	if (_biInPrototype)
+		return;
+	com.oracle.workspace.bindows.HSBaseContainerHandler.call(this);
+	this._newDocCount = 0;
+
+};
+BpmExtend(com.oracle.workspace.mode.Handler, com.oracle.workspace.bindows.HSBaseContainerHandler, "com.oracle.workspace.mode.Handler");
+
+_c.ENUMERATED_APPS_LIST = new Array();
+_c.ENUMERATED_APPS_MENUDATA = new Array();
+_c.NAVIGATE_ID_MAPPINGS =
+{
+'exploreanotation':'bpm.mnit_ToolsViewerAnotationExplorer',
+'answers':'bpm.mnit_ToolsViewerAnswers',
+'dashboards':'bpm.mnit_ToolsViewerDashboards',
+'delivers':'bpm.mnit_ToolsViewerDelivers',
+'publisher':'bpm.mnit_ToolsViewerPublisher',
+'scorecards':'bpm.mnit_ToolsViewerScorecards',
+'metrics':'bpm.mnit_ToolsViewerMetrics',
+'adminGeneral':'bpm.mnit_ToolsAdministerGeneral',
+'adminAuthProperties':'bpm.mnit_ToolsAdministerAuthProperties',
+'adminUserManagement':'bpm.mnit_ToolsAdministerUserManagement',
+'adminPhysicalResources':'bpm.mnit_ToolsAdministerPhysicalResources',
+'adminMimeTypes':'bpm.mnit_ToolsAdministerMimeTypes',
+'adminNotifications':'bpm.mnit_ToolsAdministerNotifications',
+'adminSmartcuts':'bpm.mnit_ToolsAdministerSmartcuts',
+'adminRowLevelSecurity':'bpm.mnit_ToolsAdministerRowLevelSecurity',
+'adminUsageTracking':'bpm.mnit_ToolsAdministerUsageTracking',
+'adminEventTracking':'bpm.mnit_ToolsAdministerEventTracking',
+'adminDimLibrary':'bpm.mnit_ToolsAdministerDimLibrary',
+'adminAppLibrary':'bpm.mnit_ToolsAdministerAppLibrary',
+'adminDataSync':'bpm.mnit_ToolsAdministerDataSync',
+'adminAppUpgrade':'bpm.mnit_ToolsAdministerAppUpgrade',
+'batchScheduler':'bpm.mnit_ToolsScheduleBatchScheduler',
+'viewjob':'bpm.mnit_ToolsScheduleViewJobStatus',
+'manageevents':'bpm.mnit_ToolsScheduleManageEvents',
+'showparameters':'bpm.mnit_ToolsScheduleShowParameters',
+'jobnotifications':'bpm.mnit_ToolsScheduleJobNotifications',
+'jobqueue':'bpm.mnit_ToolsScheduleJobQueue',
+'consolidate':'bpm.mnit_ToolsScheduleConsolidatedJobStatusList',
+'schedJobConsole':'bpm.mnit_ToolsScheduleJobConsole',
+'syncMetadata':'bpm.mnit_ToolsChangeManagementSynchronizeMetadata',
+'datamodelUpdates':'bpm.mnit_ToolsChangeManagementDataModelUpdates',
+'javascriptUpdates':'bpm.mnit_ToolsChangeManagementJavascriptUpdates',
+'genericUpdates':'bpm.mnit_ToolsChangeManagementGenericUpdates',
+'showTaskList':'bpm.mnit_ToolsChangeManagementShowTaskList',
+'taskStatus':'bpm.mnit_ToolsChangeManagementShowTaskStatus',
+'ioc':'bpm.mnit_ToolsChangeManagementShowImpactOfChange',
+'adminConsolidationSystemMessages':'bpm.mnit_AdminConsolidationSystemMessages',
+'adminConsolidationUsersOnSystem':'bpm.mnit_AdminConsolidationUsersOnSystem',
+'adminConsolidationManageServersAndApp':'bpm.mnit_AdminConsolidationManageServersAndApp',
+'adminClassicAppsConsolidation':'bpm.mnit_AdminClassicAppsConsolidation',
+'adminClassicAppsPlanning':'bpm.mnit_AdminClassicAppsPlanning',
+'adminChangeOwner':'bpm.mnit_ToolsAdministerChangeOwner'
+}
+;
+
+/**
+ * This should have the initialization logic
+ * Just override existing method and call additional initialization stuff
+ */
+_p.initialize = function()
+{
+	// First, determine if the Workspace configuration has been changed since
+	// the last successful logon.  If so, force a reload immediately!
+	var rstConfigId = "892638466";
+	var	bSkipInitForReset = false;
+	if (gModuleManager._configId)
+	{
+		if (gModuleManager._configId != rstConfigId)
+		{
+			bSkipInitForReset = true;
+			BiTimer.callOnce(function() {
+				gModuleManager.setLogoffOnSessionDispose(false);
+				window.location.href = window.location.href;
+			}, 1, this);
+		}
+	}
+	else
+	{
+		gModuleManager._configId = rstConfigId;
+	}
+	
+	if (!bSkipInitForReset)
+	{
+		// Set "Extra Token"
+		this._rstExtraToken = "8690B3E542D59FF3F33F107F81495F0C0B09E2C3FC85FB9DE39461757D3A35EE1D524B7A76AFCAF6552BFB8D98D17CBE";
+	
+		com.oracle.workspace.bindows.HSBaseContainerHandler.prototype.initialize.call(this);
+		
+		this._oLogger = null;
+		//Initialize messaging system only if "MessagePollInterval" Registry preferences is greater than "0"
+		if (gModuleManager.getMessagePollInterval() > 0)
+		{
+			this._initializeMessageSystem();
+		}
+		else
+		{
+			if (this.getLogger().isDebug())
+				this.getLogger().debug("Message system is NOT being initialized due to 'MessagePollInterval' value");
+		}
+		
+		this._initializeCookies();
+	}
+};
+
+/**
+ *
+ * @return 	{Logger bpm.common.Logger.html}
+ */
+_p.getLogger = function()
+{
+	if (this._oLogger == null)
+		this._oLogger = bpm.common.Logger.getLogger(this._className);
+
+	return this._oLogger;
+};
+
+/**
+ * Cookie initialization.  Forces cookies that can only be set by the container.
+ */
+_p._initializeCookies = function()
+{
+	// Set the timezone Cookie.
+	bpm.common.Utils.setCookie(com.oracle.workspace.util.HSConstants.COOKIE_TIME_ZONE,
+							   new Date().getTimezoneOffset());
+};
+
+/**
+ * Initialize the messaging system.
+ * All message-related variables and properties should be initialized here
+ */
+_p._initializeMessageSystem = function()
+{
+	if (this.getLogger().isDebug())
+		this.getLogger().debug("Message system is initializing...");
+		
+	//this._messageStartupPollInterval polling interval for first time poll only - set *one_second*
+	this._messageStartupPollInterval = 1 * 1000;
+	// this._sCheckSum - the hash value of the last received message - initially null
+	this._sCheckSum = null;
+	this._messageGetAddress = bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), "/jsp/com/oracle/workspace/messages/message.jsp");
+	this._messageTimer = new BiTimer(this._messageStartupPollInterval);
+	this._messageTimer.addEventListener("tick", this._onMessageTimerExpired, this);
+	this._startTimer();
+};
+
+/**
+ * Messaging timer handler
+ */
+_p._onMessageTimerExpired = function()
+{
+	if (this.getLogger().isDebug())
+		this.getLogger().debug("Message timer went off. Polling for the new message...");
+
+	this._messageTimer.stop();
+	
+	if (this._messageTimer.getInterval() == this._messageStartupPollInterval)
+		this._messageTimer.setInterval(gModuleManager.getMessagePollInterval() * 60 * 1000);
+	
+	var sParams = com.oracle.workspace.util.HSConstants.PARAM_CHECK_SUM + "=" + encodeURIComponent(this._sCheckSum);
+	bpm.common.TextLoader.load(this._messageGetAddress, true, this._showMessageHandler, this._showMessageHandler, this._showMessageHandler, this, true, sParams, "GET");
+
+	if (this.getLogger().isDebug())
+		this.getLogger().debug("Loading message with params='" + sParams + "'...");
+};
+
+/**
+ * Contains logic for getting message from received JSON and showing it to user.
+ * After user clicks "OK" message dialog is closed and message timer is started again
+ * In case of absence of new message (only checkSum arrived) - just start timer, w/o launching the dialog
+ */
+_p._showMessageHandler = function(rEvent)
+{
+	var rData = rEvent.getUserData();
+	var sEventType = rEvent.getType();
+	if (sEventType == "load")
+	{ // message loaded
+		if (rData)
+		{
+			if (rData.message)
+			{
+				//show message to the user and start timer when she clicks "OK"
+				bpm.common.MessageDialog.showMessageDialog(
+					rData.message, bpm.common.MessageDialog.B_OK, bpm.common.MessageDialog.M_INFO, 
+					BpmStringBundle.getStringBundle("wksp").getString("NewMessageReceived"), //"Message from system administrator"
+					this._startTimer, this); 
+			
+				//update stored message hash value with fresh one
+				this._updateCheckSum(rData.checkSum);
+			}
+			else
+			{
+				//Most likely only "checkSum arrived" - no new merssage for this time
+				//Just log received information and *start_timer*
+				this._handleNoMessage(rData.checkSum);
+			}
+		}
+		else
+		{	//I believe it is almost impossible case --> just start timer
+			if (this.getLogger().isDebug)
+				this.getLogger().debug("No user data in event");
+			
+			this._startTimer();
+		}
+	}
+	else
+	{ // error happened - possible event types are "connerror" and "processerror"  --> just start timer
+		if (this.getLogger().isDebug)
+		{
+			this.getLogger().debug("Message loading error (" + sEventType + ")");
+			//we do not need log more because in case of error - everything will be logged by BpmTextLoader
+		}
+		this._startTimer();
+	}
+};
+
+/**
+ * Updates value of parameter for next message poll
+ */
+_p._updateCheckSum = function(checkSum)
+{
+	if (checkSum)
+	{
+		this._sCheckSum = checkSum;
+		if (this.getLogger().isDebug)
+			this.getLogger().debug("Message 'checkSum' value updated to " + checkSum);
+	}
+	else
+	{
+		if (this.getLogger().isDebug)
+			this.getLogger().debug("Message parsing error - 'checkSum' property not found");
+	}
+};
+
+/**
+ * Called in case when "message" attribute is absent. Logs state and starts timer;
+ */
+_p._handleNoMessage = function(checkSum)
+{
+	if (typeof(checkSum) != "undefined")
+	{ // "message" property is absent but "checkSum" is here -- no new messages --> just start timer
+		if (this.getLogger().isDebug)
+			this.getLogger().debug("No new mesage - just checkSum (" + checkSum + ") arrived");
+	}
+	else
+	{// neither "message" nor "checkSum" properties are here -- invalid content --> just start timer
+		if (this.getLogger().isDebug)
+			this.getLogger().debug("Message parsing error - 'message' and 'chekSum' properties not found");
+	}
+	this._startTimer();
+};
+
+/**
+ * Starts timer for next poll
+ */
+_p._startTimer = function()
+{
+	this._messageTimer.start();
+
+	if (this.getLogger().isDebug)
+		this.getLogger().debug("Message timer started");
+};
+
+/**
+ * Code for manual disposing place here
+ */
+_p.dispose = function()
+{
+	if (this._disposed)
+		return;
+
+	if (this._messageTimer)
+	{
+		this._messageTimer.stop();
+		this._messageTimer.dispose();
+	}
+	com.oracle.workspace.bindows.HSBaseContainerHandler.prototype.dispose.call(this);
+};
+
+/**
+ * Initialize default values for member variables.
+ */
+_p._initializeDefaults = function()
+{
+	com.oracle.workspace.bindows.HSBaseContainerHandler.prototype._initializeDefaults.call(this);
+
+	if (false)
+		this._rstTabAlignment = bpm.common.StartupContainerHandler.TAB_ALIGNMENT_BOTTOM;
+	else
+		this._rstTabAlignment = bpm.common.StartupContainerHandler.TAB_ALIGNMENT_TOP;
+	this._iResizeContentInterval = 
+		2000;
+
+	this._rWkspStringBundle = BpmStringBundle.getStringBundle("wksp");
+
+	if (false)
+		this.getModule().getConfig()["bpm.logoff"] = "false";
+gContextManager.getContext('bpm').getParamMap()['version'] = '11.1.2.0';
+gContextManager.getContext('wksp').getParamMap()['version'] = '11.1.2.0';
+gContextManager.getContext('cds').getParamMap()['version'] = '11.1.2.4.000.1462';
+gContextManager.getContext('tools').getParamMap()['version'] = '11.1.2.4.000.1462';
+gContextManager.getContext('changeManagement').getParamMap()['version'] = '11.1.2.4.000.1462';
+gContextManager.getContext('reporting').getParamMap()['version'] = '11.1.2.4.700.0105';
+gContextManager.getContext('awb').getParamMap()['version'] = '11.1.2.4.000.2614';
+gContextManager.getContext('hfmadf').getParamMap()['version'] = '11.1.2.4.204.5267';
+gContextManager.getContext('HyperionPlanning').getParamMap()['version'] = '11.1.2.4.008.03';
+gContextManager.getContext('aif').getParamMap()['version'] = '11.1.2.4.210.012';
+gContextManager.getContext('aps').getParamMap()['version'] = '11.1.2.4.000.209';
+gContextManager.getContext('audit').getParamMap()['version'] = '11.1.2.4.0';
+gContextManager.getContext('calcmgr').getParamMap()['version'] = '11.1.2.4.0.102';
+gContextManager.getContext('cas').getParamMap()['version'] = '11.1.2.4.0';
+gContextManager.getContext('css').getParamMap()['version'] = '11.1.2.4.0';
+gContextManager.getContext('lcm').getParamMap()['version'] = '11.1.2.4.0';
+
+	bpm.common.Utils.setUser("admin");
+
+	bpm.common.Utils.setUserDisplayName(
+		this._rWkspStringBundle.getFormattedString(
+			"UserDisplayName",
+			"Administrator",
+			""));
+
+	bpm.common.Utils.setUserMailAddress("test@jsti.com");
+	var	bOBIEEExist = false;
+	var	bCDSExist = false;
+	var	raServicesName = new Array();
+
+	raServicesName.push("bpm");
+
+	raServicesName.push("wksp");
+
+	bCDSExist = true;
+
+	raServicesName.push("cds");
+
+	raServicesName.push("tools");
+
+	raServicesName.push("changeManagement");
+
+	raServicesName.push("reporting");
+
+	raServicesName.push("awb");
+
+	raServicesName.push("hfmadf");
+
+	raServicesName.push("HyperionPlanning");
+
+	raServicesName.push("aif");
+
+	raServicesName.push("aps");
+
+	raServicesName.push("audit");
+
+	raServicesName.push("calcmgr");
+
+	raServicesName.push("cas");
+
+	raServicesName.push("css");
+
+	raServicesName.push("lcm");
+
+	if (bOBIEEExist && !bCDSExist)
+	{
+		gContextManager.getContext = function (sId)
+		{
+			var arrContextMap = gContextManager.getContexts();
+			if (sId == "cds" && (arrContextMap[sId] == null))
+			{
+				sId = "wksp";
+			}
+			return bpm.common.ContextManager.prototype.getContext.call(this, sId);
+		}
+
+		BpmStringBundle.getStringBundle_BackwardsCompatibility = BpmStringBundle.getStringBundle;
+		BpmStringBundle.getStringBundle = function (contextId)
+		{
+			var arrContextMap = gContextManager.getContexts();
+			if (contextId == "cds" && (arrContextMap[contextId] == null))
+			{
+				contextId = "wksp";
+			}
+			return BpmStringBundle.getStringBundle_BackwardsCompatibility(contextId);
+		}
+	}
+	BpmImport("com.oracle.workspace.services.*");
+	var rParams = new Object();
+
+	rParams["serverName"] = "Workspace";
+	rParams["CanChangeCredential"] = "true";
+	rParams["EnableNativePassChange"] = "true";
+
+	com.oracle.workspace.services._rServiceFactory = new com.oracle.workspace.services.ServiceFactory(this, raServicesName, rParams);
+
+	var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+	for (var iIndex = 0; iIndex < raService.length; iIndex++)
+	{
+		try
+		{
+			raService[iIndex].start();
+		}
+		catch (ex)
+		{
+			var	rstDetail;
+			if (ex instanceof com.oracle.workspace.lang.HSThrowable)
+				rstDetail = ex.getDetailChain();
+			else
+				rstDetail = ex.message;
+
+			bpm.common.MessageDialog.showDetailsDialog(
+				this._rBpmStringBundle.getString("ProcessErrorMsg"), 
+				rstDetail,
+				null,
+				BiOptionPane.getImageFromOptionType("error"));
+		}
+	}
+	
+	if (!com.hyperion.tools)
+		com.hyperion.tools = new Object();
+	if (!com.hyperion.tools.cds)
+		com.hyperion.tools.cds = new Object();
+	if (!com.hyperion.tools.cds.repository)
+		com.hyperion.tools.cds.repository = new Object();
+	if (!com.hyperion.tools.cds.repository.bpm)
+		com.hyperion.tools.cds.repository.bpm = new Object();
+	if (!com.hyperion.tools.cds.repository.bpm.mode)
+		com.hyperion.tools.cds.repository.bpm.mode = new Object();
+	if (!com.hyperion.tools.cds.repository.bpm.mode.Handler)
+		com.hyperion.tools.cds.repository.bpm.mode.Handler = new Object();
+	com.hyperion.tools.cds.repository.bpm.mode.Handler.MENU_IMAGE_HEIGHT = 16;
+	com.hyperion.tools.cds.repository.bpm.mode.Handler.MENU_IMAGE_WIDTH = 16;
+
+		var rstAppId = "HFM";
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_LIST[0] = rstAppId;
+
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[0] = {};
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[0]._menuId = "bpm.mnit_ApplictionHFM";
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[0]._menuIcon = "../hfmadf/images/oracle/epm/fm/WS_HFMApps.gif";
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[0]._menuName = BpmStringBundle.getString('hfmadf-global','Consolidation');
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[0]._hssCode = "HFM-11.1.2";
+
+		var rstAppId = "HP";
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_LIST[1] = rstAppId;
+
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[1] = {};
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[1]._menuId = "bpm.mnit_ApplicationHP";
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[1]._menuIcon = "../HyperionPlanning/Images/CT_HPApps.gif";
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[1]._menuName = BpmStringBundle.getString('HyperionPlanning-global','Planning');
+		com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[1]._hssCode = "HP-11.1.2";
+
+	this._rNavAppMenuItemHashtable = new Object();
+	this._rNavAppMenuHashtable = new Object();
+	this._rOpenAppMenuItemHashtable = new Object();
+	this._rOpenAppMenuHashtable = new Object();
+};
+
+/**
+ * Initialize default values for member variables.
+ */
+_p._initializeActions = function()
+{
+	com.oracle.workspace.bindows.HSBaseContainerHandler.prototype._initializeActions.call(this);
+
+	var	rModule = this.getModule();
+	var	rContent = rModule.getContent();
+	var	actionBar = rModule.getActionBarDef();
+	actionBar.setId("wksp.mode.actionBar");
+	var	toolBar = new BpmToolBar();
+	toolBar.setId("wksp.mode.tlb");
+	rModule.setToolBarDef(toolBar);
+
+	this._rToolBarButtonHome = new BiToolBarButton();
+	this._rToolBarButtonHome.setId("wksp.mode.tlbt_Home");
+	this._rToolBarButtonHome.setToolTipText(this._rWkspStringBundle.getString("Home"));
+	this._rToolBarButtonHome.setEnabled(true);
+	this._rToolBarButtonHome.setIcon(new BiImage(bpm.common.Utils.joinPaths(com.oracle.workspace.util.HSConstants.IMAGES_PATH, "/com/oracle/workspace/repository/bpm/TB_Home.gif")));
+	toolBar.add(this._rToolBarButtonHome);
+
+	var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+	for (var iIndex = 0; iIndex < raService.length; iIndex++)
+	{
+		try
+		{
+			if (raService[iIndex].isAvailable())
+				raService[iIndex].initializeActions();
+		}
+		catch (ex)
+		{
+			var	rstDetail;
+			if (ex instanceof com.oracle.workspace.lang.HSThrowable)
+				rstDetail = ex.getDetailChain();
+			else
+				rstDetail = ex.message;
+
+			bpm.common.MessageDialog.showDetailsDialog(
+				this._rBpmStringBundle.getString("ProcessErrorMsg"), 
+				rstDetail,
+				null,
+				BiOptionPane.getImageFromOptionType("error"));
+		}
+	}
+var rstStartupContextPath = gModuleManager.getStartupContextPath();
+var rItem = null;
+var rMenuButton = null;
+var rNavMenu = application.getComponentById(bpm.common.Constants.MENU_ID_NAV);
+var rMenu0 = rNavMenu;
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_Nav_Separator1');
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_Nav_App');
+rItem.setText('Applications\np');
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, 'static/images/com/oracle/workspace/repository/bpm/CT_ApplicationsMode.gif'),16,16));
+rMenu0.add(rItem);
+this._rNavAppMenuItem = rItem;
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_App');
+rItem.setSubMenu(rMenu1);
+this._rNavAppSubMenu = rMenu1;
+rMenu1.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, function(rEvent) { rEvent.setUserData('bpm.mnu_App'); bpm.common.Utils.getDesktop().getHandler().handleActionBar(rEvent);});
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_Nav_App_NoApplications');
+rItem.setText('No Applications');
+rMenu1.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_Nav_App_NoApplicationsSep');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_Nav_App_NoApplicationsRefresh');
+rItem.setText('Refresh\nh');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_tax_management');
+rItem.setText(BpmStringBundle.getString('hfmadf-global','MItem_TaxManagement'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hfmadf/images/oracle/epm/fm/WS_HFMAppsTax.png'),16,16));
+rMenu1.add(rItem);
+var rMenu2 = new BpmMenu();
+rMenu2.setId('bpm.mnu_TaxProvApp');
+rItem.setSubMenu(rMenu2);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_tax_provisioning');
+rItem.setText(BpmStringBundle.getString('hfmadf-global','MItem_Tax'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hfmadf/images/oracle/epm/fm/WS_HFMAppsTax.png'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_Nav_Separator2');
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdminister');
+rItem.setText('Administer\na');
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, 'static/images/com/oracle/workspace/repository/bpm/CT_AdministerMode.gif'),16,16));
+rMenu0.add(rItem);
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_ToolsAdminister');
+rItem.setSubMenu(rMenu1);
+var administerSubMenu = rMenu1;
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsWsSettings');
+rItem.setText('Workspace Settings\nr');
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, 'static/images/com/oracle/workspace/repository/bpm/CT_AdministerModeWorkspaceSettings.png'),16,16));
+rMenu1.add(rItem);
+var rMenu2 = new BpmMenu();
+rMenu2.setId('bpm.mnu_ToolsWsSettings');
+rItem.setSubMenu(rMenu2);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsWsServerSettings');
+rItem.setText('Server Settings\nr');
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, 'static/images/com/oracle/workspace/repository/bpm/CT_AdministerModeWorkspaceServerSettings.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsWsAssignPrefs');
+rItem.setText('Manage Preferences\ng');
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, 'static/images/com/oracle/workspace/repository/bpm/CT_AdministerModeManagePrefs.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_RnA');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.RnA'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ReportingAnalysis.gif'),16,16));
+rMenu1.add(rItem);
+var rMenu2 = new BpmMenu();
+rMenu2.setId('bpm.mnu_RnA');
+rItem.setSubMenu(rMenu2);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerGeneral');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.General'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeGeneral.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerCMCServices');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.CMCServices'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeCMCServices.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerCMCWebApp');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.CMCWebApp'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeCMCWebApp.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerCMCHost');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.CMCHost'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeCMCHost.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_RnASeparator1');
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_prengines');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.prengines'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModePREngines.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_PRDBServers');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.PRDBServers'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModePRDBServers.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_generic');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.generic'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeGeneric.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerAuthProperties');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.AuthProps'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeAuthentication.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_RnASeparator2');
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerMimeTypes');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.MimeTypes'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeMimeTypes.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerNotifications');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.Notifications'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeNotifications.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerChangeOwner');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.ChangeOwner'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeChangeOwner.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_RnASeparator3');
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerUsageTracking');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.UsageTracking'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeUsageTracking.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerEventTracking');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.EventTracking'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeEventTracking.gif'),16,16));
+rMenu2.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_RnASeparator4');
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsViewerAnotationExplorer');
+rItem.setText(BpmStringBundle.getString('reporting-global','MItemExploreAnnotation'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hr/modules/com/hyperion/reporting/web/images/CT_AdministerModeExploreAnnotation.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_BpmaSeparator');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerDimLibrary');
+rItem.setText(BpmStringBundle.getString('awb-global','MITEM_DIMENSION_LIBRARY'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../awb/../epmstatic/awb/themes/common/images/CT_AdministerModeDimLibrary.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerAppLibrary');
+rItem.setText(BpmStringBundle.getString('awb-global','MITEM_APPLICATION_LIBRARY'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../awb/../epmstatic/awb/themes/common/images/CT_AdministerModeAppLibrary.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerDataSync');
+rItem.setText(BpmStringBundle.getString('awb-global','MITEM_DATA_SYNCHRONIZATION'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../awb/../epmstatic/awb/themes/common/images/CT_AdministerModeDataSync.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerAppUpgrade');
+rItem.setText(BpmStringBundle.getString('awb-global','MITEM_APPLICATION_UPGRADE'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../awb/../epmstatic/awb/themes/common/images/CT_AdministerModeAppLibrary.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsScheduleJobConsole');
+rItem.setText(BpmStringBundle.getString('awb-global','MITEM_JOB_CONSOLE'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../awb/../epmstatic/awb/themes/common/images/CT_ScheduleModeJobConsole.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerInterfaceDS');
+rItem.setText(BpmStringBundle.getString('awb-global','MITEM_INTERFACE_DS'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../awb/../epmstatic/awb/themes/common/images/CT_AdministerInterfaceDS.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_ClassicAppsSeparator');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_AdminClassicAppsConsolidation');
+rItem.setText(BpmStringBundle.getString('hfmadf-global','MItem_ClassicAppsConsolidation'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hfmadf/images/oracle/epm/fm/WS_HFMApps.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_AdminClassicAppsPlanning');
+rItem.setText(BpmStringBundle.getString('HyperionPlanning-global','MItem_ClassicAppsPlanning'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../HyperionPlanning/Images/CT_HPApps.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_aiflaunch1');
+rItem.setText(BpmStringBundle.getString('aif-global','ERPI'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../aif/../epmstatic/aif/images/general/application.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_CalcMgrSeparator');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsAdministerCalculationManager');
+rItem.setText(BpmStringBundle.getString('calcmgr-global','MItem_CalculationManager'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../calcmgr/../epmstatic/calcmgr/themes/common/images/CT_AdminCalcManager.gif'),16,16));
+rItem.setBefore('bpm.mnit_ToolsAdministerAppUpgrade');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('hss.mnit_ToolsAdministerUserManagement');
+rItem.setText(BpmStringBundle.getString('cas-global','MItemUserManagement'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../interop/../workspace/static/images/com/oracle/workspace/repository/bpm/CT_AdministerModeUserManagement.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_Nav_Separator3');
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsViewerExplorer');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.Explore'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ExploreMode.gif'),16,16));
+rItem.setBefore('bpm.mnit_Nav_Separator2');
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_NavWorkspacePages');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.WorkspacePages'));
+rItem.setBefore('bpm.mnit_Nav_Separator2');
+rMenu0.add(rItem);
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_NavWorkspacePages');
+rItem.setSubMenu(rMenu1);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_NavWorkspacePagesPersonal');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.Personal'));
+rMenu1.add(rItem);
+var rMenu2 = new BpmMenu();
+rMenu2.setId('bpm.mnu_NavWorkspacePagesPersonal');
+rItem.setSubMenu(rMenu2);
+rMenu2.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, function(rEvent) { rEvent.setUserData('bpm.mnu_NavWorkspacePagesPersonal'); bpm.common.Utils.getDesktop().getHandler().handleActionBar(rEvent);});
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_NavWorkspacePagesCorporate');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.Corporate'));
+rMenu1.add(rItem);
+var rMenu2 = new BpmMenu();
+rMenu2.setId('bpm.mnu_NavWorkspacePagesCorporate');
+rItem.setSubMenu(rMenu2);
+rMenu2.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, function(rEvent) { rEvent.setUserData('bpm.mnu_NavWorkspacePagesCorporate'); bpm.common.Utils.getDesktop().getHandler().handleActionBar(rEvent);});
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsSchedule');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.Schedule'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ScheduleMode.gif'),16,16));
+rItem.setBefore('bpm.mnit_Nav_Separator3');
+rMenu0.add(rItem);
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_ToolsSchedule');
+rItem.setSubMenu(rMenu1);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsScheduleBatchScheduler');
+rItem.setText(BpmStringBundle.getString('reporting-global','MItemBatchScheduler'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hr/modules/com/hyperion/reporting/web/images/CT_ScheduleModeBatchScheduler.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_IManager');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.ImpactManager'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementMode.gif'),16,16));
+rItem.setBefore('bpm.mnit_Nav_Separator3');
+rMenu0.add(rItem);
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_IManager');
+rItem.setSubMenu(rMenu1);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangeManagementSynchronizeMetadata');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.SynchronizeMetadata'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeSynchronizeMetadata.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangeManagementDataModelUpdates');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.UpdateDataModels'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeDataModelUpdate.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangeManagementJavascriptUpdates');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.UpdateJavascript'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeJavascriptUpdates.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangeManagementGenericUpdates');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.CustomUpdate'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeGenericUpdates.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangeManagementShowTaskStatus');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.ShowTaskStatus'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeJobStatus.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangeManagementShowTaskList');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.ManageTaskList'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeShowTaskList.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangeManagementShowImpactOfChange');
+rItem.setText(BpmStringBundle.getString('changeManagement-global','MItem.ShowImpactOfChange'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../raframework/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeImpactOfChange.gif'),16,16));
+rMenu1.add(rItem);
+rMenuButton = new BpmMenuButton();
+rMenuButton.setId('bpm.mnbt_File');
+actionBar.add(rMenuButton);
+var rMenu0 = new BpmMenu();
+rMenu0.setId('bpm.mnu_File');
+rMenuButton.setSubMenu(rMenu0);
+rMenu0.setBefore('bpm.mnit_FileClose');
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_FileOpen');
+rItem.setText('Open\no');
+rMenu0.add(rItem);
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_Open');
+rItem.setSubMenu(rMenu1);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_FileURLLauncherSeparator');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_File_URLLauncher');
+rItem.setText('URL...\nu');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_Open_App');
+rItem.setText('Applications\np');
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, 'static/images/com/oracle/workspace/repository/bpm/CT_ApplicationsMode.gif'),16,16));
+rMenu1.add(rItem);
+this._rOpenAppMenuItem = rItem;
+var rMenu2 = new BpmMenu();
+rMenu2.setId('bpm.mnu_Open_App');
+rItem.setSubMenu(rMenu2);
+this._rOpenAppSubMenu = rMenu2;
+rMenu2.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, function(rEvent) { rEvent.setUserData('bpm.mnu_Open_App'); bpm.common.Utils.getDesktop().getHandler().handleActionBar(rEvent);});
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_Open_App_NoApplications');
+rItem.setText('No Applications');
+rMenu2.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.mnit_Open_App_NoApplicationsSep');
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_Open_App_NoApplicationsRefresh');
+rItem.setText('Refresh\nh');
+rMenu2.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_tax_managementFile');
+rItem.setText(BpmStringBundle.getString('hfmadf-global','MItem_TaxManagement'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hfmadf/images/oracle/epm/fm/WS_HFMAppsTax.png'),16,16));
+rMenu2.add(rItem);
+var rMenu3 = new BpmMenu();
+rMenu3.setId('bpm.mnu_TaxProv_File');
+rItem.setSubMenu(rMenu3);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_tax_provisioning_file');
+rItem.setText(BpmStringBundle.getString('hfmadf-global','MItem_Tax'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hfmadf/images/oracle/epm/fm/WS_HFMAppsTax.png'),16,16));
+rMenu3.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_FileOpenDocument');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.OpenDocument'));
+rItem.setCommand(this.getModule().getCommands().getCommandsList()['wksp.mode.cmdOpenDoc']);
+rItem.setBefore('bpm.mnit_FileURLLauncherSeparator');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsWorkspacePages');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.WorkspacePages'));
+rItem.setBefore('bpm.mnit_FileURLLauncherSeparator');
+rMenu1.add(rItem);
+var rMenu2 = new BpmMenu();
+rMenu2.setId('bpm.mnu_ToolsWorkspacePages');
+rItem.setSubMenu(rMenu2);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsWorkspacePagesPersonal');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.Personal'));
+rMenu2.add(rItem);
+var rMenu3 = new BpmMenu();
+rMenu3.setId('bpm.mnu_ToolsWorkspacePagesPersonal');
+rItem.setSubMenu(rMenu3);
+rMenu3.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, function(rEvent) { rEvent.setUserData('bpm.mnu_ToolsWorkspacePagesPersonal'); bpm.common.Utils.getDesktop().getHandler().handleActionBar(rEvent);});
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsWorkspacePagesCorporate');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.Corporate'));
+rMenu2.add(rItem);
+var rMenu3 = new BpmMenu();
+rMenu3.setId('bpm.mnu_ToolsWorkspacePagesCorporate');
+rItem.setSubMenu(rMenu3);
+rMenu3.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, function(rEvent) { rEvent.setUserData('bpm.mnu_ToolsWorkspacePagesCorporate'); bpm.common.Utils.getDesktop().getHandler().handleActionBar(rEvent);});
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_FileNew');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.New'));
+rItem.setBefore('bpm.mnit_FileOpen');
+rMenu0.add(rItem);
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_New');
+rItem.setSubMenu(rMenu1);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_FileNewDocument');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.Document'));
+rItem.setCommand(this.getModule().getCommands().getCommandsList()['wksp.mode.cmdNewDoc']);
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_WorkspacePage');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.NewWorkspacePages'));
+rItem.setCommand(this.getModule().getCommands().getCommandsList()['wksp.mode.cmdNewWP']);
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_FileNewPP');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.PP'));
+rItem.setCommand(this.getModule().getCommands().getCommandsList()['wksp.mode.cmdNewPP']);
+rMenu1.add(rItem);
+rMenuButton = new BpmMenuButton();
+rMenuButton.setId('bpm.mnbt_Favorites');
+rMenuButton.setText('Favorites\nr');
+rMenuButton.setBefore('bpm.mnbt_Help');
+actionBar.add(rMenuButton);
+var rMenu0 = new BpmMenu();
+rMenu0.setId('bpm.mnu_Favorites');
+rMenuButton.setSubMenu(rMenu0);
+rMenu0.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, function(rEvent) { rEvent.setUserData('bpm.mnu_Favorites'); bpm.common.Utils.getDesktop().getHandler().handleActionBar(rEvent);});
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_FavoriteAdd');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.AddToFavorites'));
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_FavoritesManager');
+rItem.setText(BpmStringBundle.getString('cds-global','MItem.ManageFavorites'));
+rMenu0.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.sep_FavoritesManager');
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsPersonalizeSubscriptions');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.ShowSubscribedItems'));
+rItem.setCommand(this.getModule().getCommands().getCommandsList()['wksp.mode.cmdSubscriptions']);
+rItem.setBefore('bpm.sep_FavoritesManager2');
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsPersonalizeManagePages');
+rItem.setText(BpmStringBundle.getString('tools-global','MItem.ManagePersonalPages'));
+rItem.setCommand(this.getModule().getCommands().getCommandsList()['wksp.mode.cmdManagePersonalPages']);
+rItem.setBefore('bpm.sep_FavoritesManager2');
+rMenu0.add(rItem);
+rItem = new BpmMenuSeparator();
+rItem.setId('bpm.sep_FavoritesManager2');
+rMenu0.add(rItem);
+rMenuButton = new BpmMenuButton();
+rMenuButton.setId('bpm.mnbt_Tools');
+rMenuButton.setText('Tools\nt');
+rMenuButton.setBefore('bpm.mnbt_Help');
+actionBar.add(rMenuButton);
+var rMenu0 = new BpmMenu();
+rMenu0.setId('bpm.mnu_Tools');
+rMenuButton.setSubMenu(rMenu0);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsChangePassword');
+rItem.setText('Change Password...\nc');
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsInstall');
+rItem.setText('Install\ni');
+rMenu0.add(rItem);
+var rMenu1 = new BpmMenu();
+rMenu1.setId('bpm.mnu_ToolsInstall');
+rItem.setSubMenu(rMenu1);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsInstallSmartView');
+rItem.setText('Smart View\ns');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsInstallPredictivePlanning');
+rItem.setText('Predictive Planning\nr');
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsInstallFR');
+rItem.setText(BpmStringBundle.getString('reporting-global','MItemInstallFRStudio'));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsInstallHFMx64');
+rItem.setText(BpmStringBundle.getString('hfmadf-global','MItem_HFMClientx64'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hfmadf/images/oracle/epm/fm/WS_HFMApps.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsInstallHFMx86');
+rItem.setText(BpmStringBundle.getString('hfmadf-global','MItem_HFMClientx86'));
+rItem.setIcon(new BiImage(bpm.common.Utils.joinPaths(rstStartupContextPath, '../hfmadf/images/oracle/epm/fm/WS_HFMApps.gif'),16,16));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsInstallOfflinePlanning');
+rItem.setText(BpmStringBundle.getString('HyperionPlanning-global','MItem_ToolsOfflineInstall'));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnit_ToolsInstallSVExtension');
+rItem.setText(BpmStringBundle.getString('HyperionPlanning-global','MItem_ToolsSVExtensionInstall'));
+rMenu1.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsLaunchFR');
+rItem.setText(BpmStringBundle.getString('reporting-global','MItemLaunchFRStudio'));
+rMenu0.add(rItem);
+rItem = new BpmMenuItem();
+rItem.setId('bpm.mnu_ToolsLaunchFRWebStudio');
+rItem.setText(BpmStringBundle.getString('reporting-global','MItemLaunchFRWebStudio'));
+rMenu0.add(rItem);
+application.getAdf().getXmlResourceParser()._addObject(administerSubMenu, bpm.common.Constants.MENU_ID_TOOLS_ADMINISTER);
+if (rUserManagementMenu)application.getAdf().getXmlResourceParser()._addObject(rUserManagementMenu, bpm.common.Constants.MENUITEM_ID_NAV_ADMINISTER_USER_MANAGEMENT);
+
+	var rNavMenu = application.getComponentById(bpm.common.Constants.MENU_ID_NAV);
+
+	// Special cases -- these are either needed for *very* custom functionality or
+	// backwards compatibility.  Certain variables references here are created
+	// from flags in the configuration file when the relevant menu object is created.
+	if (true)
+		this._buildAppMenu(this._rNavAppSubMenu, this._rNavAppMenuItemHashtable, this._rNavAppMenuHashtable);
+
+	rNavMenu.add(this.createOpenItemsMenuItem());
+	this.createOpenItemsSubMenu();
+
+	// Special case code from MenuToolBar.inc
+	if (true)
+		this._buildAppMenu(this._rOpenAppSubMenu, this._rOpenAppMenuItemHashtable, this._rOpenAppMenuHashtable);
+
+	var	rUserManagementMenu = application.getComponentById(bpm.common.Constants.MENUITEM_ID_NAV_ADMINISTER_USER_MANAGEMENT);
+	if (rUserManagementMenu)
+		rUserManagementMenu.setEnabled((com.oracle.workspace.roles.RoleVars.hasRole(com.oracle.workspace.roles.RoleVars.ROLE_CAN_PROVISION_USERS))|| (com.oracle.workspace.roles.RoleVars.hasRole(com.oracle.workspace.roles.RoleVars.ROLE_DIRECTORY_MANAGER)));
+};
+
+/**
+ * Initialize default values for member variables.
+ */
+_p._initializeContent = function()
+{
+	var	rModule = this.getModule();
+	var	rContent = rModule.getContent();
+
+	com.oracle.workspace.bindows.HSBaseContainerHandler.prototype._initializeContent.call(this);
+	
+	var	rstModuleId = rModule.getId();
+	var	cmds = rModule.getCommands();
+	var toolBar = rModule.getToolBarDef();
+
+	var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+	for (var iIndex = 0; iIndex < raService.length; iIndex++)
+	{
+		try
+		{
+			if (raService[iIndex].isAvailable())
+				raService[iIndex].initializeContent();
+		}
+		catch (ex) 
+		{
+			var	rstDetail;
+			if (ex instanceof com.oracle.workspace.lang.HSThrowable)
+				rstDetail = ex.getDetailChain();
+			else
+				rstDetail = ex.message;
+
+			bpm.common.MessageDialog.showDetailsDialog(
+				this._rBpmStringBundle.getString("ProcessErrorMsg"), 
+				rstDetail,
+				null,
+				BiOptionPane.getImageFromOptionType("error"));
+		}
+	}
+};
+
+/**
+ * Convenience function that returns true iff the passed module ID belongs to Scorecards
+ */
+_p._idIsScorecards = function(rstModuleId)
+{
+	return ((rstModuleId == com.oracle.workspace.util.HSConstants.MODULE_ID_HPS_BROWSER) || 
+		(rstModuleId == "hps.mapViewer") || 
+		(rstModuleId == "hps.scorecardViewer") || 
+		(rstModuleId == "hps.scorecardExcelViewer"));
+};
+
+/**
+ * Gets the Logoff  (non-proxied) URL from CMC.
+ */
+_p.getPostLogoffURL = function()
+{
+
+	 this._logoffurl = "";
+
+	 return this._logoffurl;
+};
+
+/**
+ * Called when event triggerd on file open url launcher sub menu.
+ */
+_p.onUrlLauncher = function(rDialog)
+{
+	rDialog.getHandler().getOk = function(rstTextOrig, rstText)
+	{
+		var	bOk = false;
+		if (rstText != null && rstText.length > 0)
+		{
+			var	rstUrl = rstText;
+			rstUrl = bpm.common.Utils.addUrlScheme("http://", rstUrl);
+			bOk = bpm.common.Utils.validateUrl(rstUrl);
+		}
+		if (!bOk)
+		{
+			bpm.common.MessageDialog.showMessageDialog(
+				BpmStringBundle.getStringBundle("wksp").getString("NewUrlDialogInvalidUrl"),
+				bpm.common.MessageDialog.B_OK,bpm.common.MessageDialog.M_ERROR);
+		}
+		return bOk;
+	}
+	rDialog.addEventListener(bpm.common.Constants.EVENT_DIALOGRESULT,this.onUrlLauncherDialogResult, this);
+};
+
+/**
+ * This Function called as url launcher dialog result.
+ */
+_p.onUrlLauncherDialogResult = function(rEvent)
+{
+	if (rEvent.getTarget().getDialogResult() == true)
+	{
+		var	rstUrl = rEvent.getTarget().getUserData();
+		rstUrl = bpm.common.Utils.addUrlScheme("http://", rstUrl);
+		
+		var	rParams = new Object();
+		rParams["com.hyperion.tools.cds.urllauncher.url"] = rstUrl;
+		rParams[com.oracle.workspace.util.HSConstants.PARAM_REINITIALIZE] = true;
+		this.loadModuleAsync("wksp.urllauncher", rParams);
+	}
+};
+
+/**
+ * Handles the action bar actions.
+ *
+ * @param {BiEvent http://www.bindows.net/documentation/api/BiEvent.html}
+ *        rEvent The event.
+ * @return {Boolean http://docs.sun.com/source/816-6408-10/boolean.htm}
+ *         <code>true</code> if the action was handled, <code>false</code> otherwise.
+ */
+_p.handleActionBar = function(rEvent)
+{
+	var	rActiveModule = this.getActiveModule();
+	var	bContinue = false
+	if (rActiveModule != this.getModule())
+	{
+		bContinue = rActiveModule.getHandler().handleActionBar(rEvent);
+	}
+	if (!bContinue)
+	{
+		switch (rEvent.getUserData())
+		{	
+			case "bpm.mnit_File_Prefs":
+			{
+				if (this._rOpenModuleMap["wksp.assignprefs"]){
+					var msg = BpmStringBundle.getStringBundle("bpm").getString("UnableToOpenUserPrefs");
+					var dialog = bpm.common.MessageDialog.showMessageDialog(msg, bpm.common.MessageDialog.B_CRITICAL);
+				} else {
+					this.loadModuleAsync("wksp.prefsdialog");
+				}
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnit_ToolsChangePassword":
+			{
+				var	rParams = new Object();
+				rParams["user"] = "admin";
+				rParams["change_password_url"] = "logon";
+				rParams["refresh_on_cancel"] = "false";
+				this.loadModule("bpm.changepassword", rParams);
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnit_File_URLLauncherNewWindow":
+			{
+				var	rParams = new Object();
+				rParams["simpleinputdialog_title"] = this._rWkspStringBundle.getString("NewUrlDialogUrlInNewWindow");
+				rParams["simpleinputdialog_label"] = this._rWkspStringBundle.getString("NewUrlDialogEnterTheUrl");
+				rParams["simpleinputdialog_default"] = "";
+				rParams["simpleinputdialog_ok"] = this._rBpmStringBundle.getString("OkButton");
+				rParams["simpleinputdialog_ok_accelerator"] = bpm.common.Constants.ACCELERATOR_KEY_OK;
+				var	rDialog = this.loadModuleAsync("wksp.newurldialog", rParams, this, function(rDialog)
+				{
+					rDialog.getHandler().getOk = function(rstTextOrig, rstText)
+					{
+						var	bOk = false;
+						if (rstText != null && rstText.length > 0)
+						{
+							var	rstUrl = rstText;
+							rstUrl = bpm.common.Utils.addUrlScheme("http://", rstUrl);
+							bOk = bpm.common.Utils.validateUrl(rstUrl);
+						}
+						if (!bOk)
+						{
+							bpm.common.MessageDialog.showMessageDialog(
+								BpmStringBundle.getStringBundle("wksp").getString("NewUrlDialogInvalidUrl"),
+								bpm.common.MessageDialog.B_OK,bpm.common.MessageDialog.M_ERROR);
+						}
+						return bOk;
+					}
+					rDialog.addEventListener(bpm.common.Constants.EVENT_DIALOGRESULT, function(rEvent)
+					{
+						if (rEvent.getTarget().getDialogResult() == true)
+						{
+							var	rstUrl = rEvent.getTarget().getUserData();
+							rstUrl = bpm.common.Utils.addUrlScheme("http://", rstUrl);
+							gModuleManager.launchUri(rstUrl);
+						}
+					}, this);
+				});
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnit_File_URLLauncher":
+			{
+				var	rParams = new Object();
+				rParams["simpleinputdialog_title"] = this._rWkspStringBundle.getString("NewUrlDialogUrl");
+				rParams["simpleinputdialog_label"] = this._rWkspStringBundle.getString("NewUrlDialogEnterTheUrl");
+				rParams["simpleinputdialog_default"] = "";
+				rParams["simpleinputdialog_ok"] = this._rBpmStringBundle.getString("OkButton");
+				rParams["simpleinputdialog_ok_accelerator"] = bpm.common.Constants.ACCELERATOR_KEY_OK;
+				var	rDialog = this.loadModuleAsync("wksp.openurldialog", rParams, this, this.onUrlLauncher);
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnit_About":
+			{
+				this.loadModuleAsync("wksp.abtdialog");
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnit_TopTabAlignment":
+			{
+				this.getSplitPane().setTabAlignment("top");
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnit_BottomTabAlignment":
+			{
+				this.getSplitPane().setTabAlignment("bottom");
+				bContinue = true;
+				break;
+			}
+			case "wksp.mode.cmdViewPane":
+			{
+				this._cmdViewPaneInvoked = true;
+				this.showObjectPalette(!application.getComponentById(bpm.common.Constants.MENUITEM_ID_OBJECT_PALETTE).getChecked());
+				bContinue = true;
+				break;
+			}
+			case "wksp.mode.cmdViewCollaboration":
+			{
+				this._cmdViewCollaborationInvoked = true;
+				this.expandObjectPalette(!application.getComponentById(bpm.common.Constants.MENUITEM_ID_VIEW_COLLABORATION).getChecked(), bpm.common.ObjectPalette.AREA_COLLABORATION);
+				bContinue = true;
+				break;
+			}
+			case "wksp.mode.cmdViewRelatedContent":
+			{
+				this.onShortcutRelatedContent();
+				bContinue = true;
+				break;
+			}
+			case "wksp.mode.tlbt_Home":
+			{
+				if (gModuleManager.getDeploymentMode() == bpm.common.Constants.DEPLOYMENT_MODE_CLOUD)
+				{
+					this._loadHome();
+				}
+				else
+				{
+					if (this._rStartupListItem == null)
+						this._loadStartup(true, true);
+					else
+						this._rStartupList.doItemClick(this._rStartupListItem);
+				}
+				bContinue = true;
+				break;
+			}
+			case "bpm.tlbt_Help":
+			{
+				// Toolbar help button is same as help on topic.
+				rEvent.setUserData("bpm.mnit_HelpTopic");
+				bContinue = rActiveModule.getHandler().handleActionBar(rEvent);
+				break;
+			}
+			case "bpm.mnu_App":
+			{
+				this._buildNavigateAppSubMenu(rEvent);
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnu_Open_App":
+			{
+				this._buildOpenAppSubMenu(rEvent);
+				bContinue = true;
+				break;
+			}
+			case "bpm.mnit_Nav_App_NoApplicationsRefresh":
+			case "bpm.mnit_Open_App_NoApplicationsRefresh":
+			{
+				this.refreshMenuApplications();
+				bContinue = true;
+				break;
+			}
+case 'bpm.mnit_ToolsWsServerSettings':
+{
+this.handleNavigate('bpm.mnit_ToolsWsServerSettings');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsWsAssignPrefs':
+{
+this.handleNavigate('bpm.mnit_ToolsWsAssignPrefs');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerGeneral':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerGeneral');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerCMCServices':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerCMCServices');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerCMCWebApp':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerCMCWebApp');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerCMCHost':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerCMCHost');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_prengines':
+{
+this.handleNavigate('bpm.mnit_prengines');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_PRDBServers':
+{
+this.handleNavigate('bpm.mnit_PRDBServers');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_generic':
+{
+this.handleNavigate('bpm.mnit_generic');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerAuthProperties':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerAuthProperties');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerMimeTypes':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerMimeTypes');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerNotifications':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerNotifications');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerChangeOwner':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerChangeOwner');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerUsageTracking':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerUsageTracking');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerEventTracking':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerEventTracking');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsViewerAnotationExplorer':
+{
+this.handleNavigate('bpm.mnit_ToolsViewerAnotationExplorer');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerDimLibrary':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerDimLibrary');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerAppLibrary':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerAppLibrary');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerDataSync':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerDataSync');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerAppUpgrade':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerAppUpgrade');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsScheduleJobConsole':
+{
+this.handleNavigate('bpm.mnit_ToolsScheduleJobConsole');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerInterfaceDS':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerInterfaceDS');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_AdminClassicAppsConsolidation':
+{
+this.handleNavigate('bpm.mnit_AdminClassicAppsConsolidation');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_AdminClassicAppsPlanning':
+{
+this.handleNavigate('bpm.mnit_AdminClassicAppsPlanning');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_aiflaunch1':
+{
+this.handleNavigate('bpm.mnit_aiflaunch1');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsAdministerCalculationManager':
+{
+this.handleNavigate('bpm.mnit_ToolsAdministerCalculationManager');
+bContinue = true;
+break;
+}
+case 'hss.mnit_ToolsAdministerUserManagement':
+{
+this.handleNavigate('hss.mnit_ToolsAdministerUserManagement');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsViewerExplorer':
+{
+this.handleNavigate('bpm.mnit_ToolsViewerExplorer');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsScheduleBatchScheduler':
+{
+this.handleNavigate('bpm.mnit_ToolsScheduleBatchScheduler');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementSynchronizeMetadata':
+{
+this.handleNavigate('bpm.mnit_ToolsChangeManagementSynchronizeMetadata');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementDataModelUpdates':
+{
+this.handleNavigate('bpm.mnit_ToolsChangeManagementDataModelUpdates');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementJavascriptUpdates':
+{
+this.handleNavigate('bpm.mnit_ToolsChangeManagementJavascriptUpdates');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementGenericUpdates':
+{
+this.handleNavigate('bpm.mnit_ToolsChangeManagementGenericUpdates');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementShowTaskStatus':
+{
+this.handleNavigate('bpm.mnit_ToolsChangeManagementShowTaskStatus');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementShowTaskList':
+{
+this.handleNavigate('bpm.mnit_ToolsChangeManagementShowTaskList');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementShowImpactOfChange':
+{
+this.handleNavigate('bpm.mnit_ToolsChangeManagementShowImpactOfChange');
+bContinue = true;
+break;
+}
+case 'bpm.mnu_ToolsInstallSmartView':
+{
+this.handleNavigate('bpm.mnu_ToolsInstallSmartView');
+bContinue = true;
+break;
+}
+case 'bpm.mnu_ToolsInstallPredictivePlanning':
+{
+this.handleNavigate('bpm.mnu_ToolsInstallPredictivePlanning');
+bContinue = true;
+break;
+}
+case 'bpm.mnu_ToolsInstallFR':
+{
+this.handleNavigate('bpm.mnu_ToolsInstallFR');
+bContinue = true;
+break;
+}
+case 'bpm.mnu_ToolsInstallHFMx64':
+{
+this.handleNavigate('bpm.mnu_ToolsInstallHFMx64');
+bContinue = true;
+break;
+}
+case 'bpm.mnu_ToolsInstallHFMx86':
+{
+this.handleNavigate('bpm.mnu_ToolsInstallHFMx86');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsInstallOfflinePlanning':
+{
+this.handleNavigate('bpm.mnit_ToolsInstallOfflinePlanning');
+bContinue = true;
+break;
+}
+case 'bpm.mnit_ToolsInstallSVExtension':
+{
+this.handleNavigate('bpm.mnit_ToolsInstallSVExtension');
+bContinue = true;
+break;
+}
+case 'bpm.mnu_ToolsLaunchFR':
+{
+this.handleNavigate('bpm.mnu_ToolsLaunchFR');
+bContinue = true;
+break;
+}
+case 'bpm.mnu_ToolsLaunchFRWebStudio':
+{
+this.handleNavigate('bpm.mnu_ToolsLaunchFRWebStudio');
+bContinue = true;
+break;
+}
+
+		}
+		if (!bContinue)
+		{
+			var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+			for (var iIndex = 0; iIndex < raService.length && !bContinue; iIndex++)
+			{
+				if (raService[iIndex].isAvailable())
+					bContinue = raService[iIndex].handleActionBar(rEvent);
+			}
+		}
+			
+		if (!bContinue && rEvent.getUserData())
+		{
+			for (var i = 0; i < com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA.length; i++)
+			{
+				var rstAppId = com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[i]._menuId;
+				if ((rEvent.getUserData().indexOf(rstAppId) == 0))
+				{
+					this.handleNavigate(rEvent.getTarget().getUserData());
+					bContinue = true;
+					break;
+				}
+			}
+		}
+	}
+
+	if (!bContinue)
+		bContinue = com.oracle.workspace.bindows.HSBaseContainerHandler.prototype.handleActionBar.call(this, rEvent);
+
+	return bContinue;
+};
+
+/**
+ * Handles all the navigation menu items.
+ * @private
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm}
+ *        rstId The unique id associated with the menu item.
+ * @param Array of params to pass on for launching of app from related content.
+ */
+_p.handleNavigate = function(rstId, rParams)
+{
+	var	rstContextId = null;
+	var	rstModuleId = null;
+	var	rstUri = null;
+	var	rstUriWindowName = null;
+	var	rstUriOptions = null;
+	var	rstUriWorkspaceParams = null;
+	var	rTempParams = rParams ? bpm.common.Utils.cloneHashmap(rParams) : new Object();
+	
+	var rstNavigateId = com.oracle.workspace.mode.Handler.NAVIGATE_ID_MAPPINGS[rstId];
+	if (rstNavigateId)
+		rstId = rstNavigateId;
+	
+	switch(rstId)
+	{
+case 'bpm.mnit_ToolsWsServerSettings':
+{
+rstModuleId = 'wksp.serversettings';
+rTempParams = {'bpm.contentimageuri':bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(),'static/images/com/oracle/workspace/repository/bpm/CT_AdministerModeWorkspaceServerSettings.gif')};
+break;
+}
+case 'bpm.mnit_ToolsWsAssignPrefs':
+{
+rstModuleId = 'wksp.assignprefs';
+rTempParams = {'bpm.contentimageuri':bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(),'static/images/com/oracle/workspace/repository/bpm/CT_AdministerModeManagePrefs.gif')};
+break;
+}
+case 'bpm.mnit_ToolsAdministerGeneral':
+{
+rstModuleId = 'tools.admin';
+rTempParams = {'bpm.modeListId':'adminGeneral','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeGeneral.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerCMCServices':
+{
+rstModuleId = 'tools.cmc.services';
+rTempParams = {'bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeCMCServices.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerCMCWebApp':
+{
+rstModuleId = 'tools.cmc.webapp';
+rTempParams = {'bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeCMCWebApp.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerCMCHost':
+{
+rstModuleId = 'tools.cmc.host';
+rTempParams = {'bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeCMCHost.gif'};
+break;
+}
+case 'bpm.mnit_prengines':
+{
+rstModuleId = 'tools.administration.raa.prengines';
+rTempParams = {'bpm.modeListId':'prengines','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModePREngines.gif'};
+break;
+}
+case 'bpm.mnit_PRDBServers':
+{
+rstModuleId = 'tools.administration.raa.PRDBServers';
+rTempParams = {'bpm.modeListId':'PRDBServers','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModePRDBServers.gif'};
+break;
+}
+case 'bpm.mnit_generic':
+{
+rstModuleId = 'tools.administration.raa.generic';
+rTempParams = {'bpm.modeListId':'generic','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeGeneric.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerAuthProperties':
+{
+rstModuleId = 'tools.admin.authproperties';
+rTempParams = {'bpm.modeListId':'adminAuthProperties','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeAuthentication.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerMimeTypes':
+{
+rstModuleId = 'tools.admin.mimetypes';
+rTempParams = {'bpm.modeListId':'adminMimeTypes','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeMimeTypes.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerNotifications':
+{
+rstModuleId = 'tools.admin.notifications';
+rTempParams = {'bpm.modeListId':'adminNotifications','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeNotifications.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerChangeOwner':
+{
+rstModuleId = 'tools.admin.changeowner';
+rTempParams = {'bpm.modeListId':'adminChangeOwner','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeChangeOwner.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerUsageTracking':
+{
+rstModuleId = 'tools.admin.usagetracking';
+rTempParams = {'bpm.modeListId':'adminUsageTracking','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeUsageTracking.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerEventTracking':
+{
+rstModuleId = 'tools.admin.eventtracking';
+rTempParams = {'bpm.modeListId':'adminEventTracking','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_AdministerModeEventTracking.gif'};
+break;
+}
+case 'bpm.mnit_ToolsViewerAnotationExplorer':
+{
+rstModuleId = 'reporting.annotationmanager';
+rTempParams = {'bpm.contentimageuri':'/modules/com/hyperion/reporting/web/images/CT_AdministerModeExploreAnnotation.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerDimLibrary':
+{
+rstModuleId = 'awb.dimeditor';
+rTempParams = {'bpm.contentimageuri':'../epmstatic/awb/themes/common/images/CT_AdministerModeDimLibrary.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerAppLibrary':
+{
+rstModuleId = 'awb.appmanager';
+rTempParams = {'bpm.docid':'bpmaal','bpm.contentimageuri':'../epmstatic/awb/themes/common/images/CT_AdministerModeAppLibrary.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerDataSync':
+{
+rstModuleId = 'awb.datasync';
+rTempParams = {'bpm.docid':'bpmads','bpm.contentimageuri':'../epmstatic/awb/themes/common/images/CT_AdministerModeDataSync.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerAppUpgrade':
+{
+rstModuleId = 'awb.upgrade';
+rTempParams = {'bpm.docid':'bpmads','bpm.contentimageuri':'../epmstatic/awb/themes/common/images/CT_AdministerModeAppLibrary.gif'};
+break;
+}
+case 'bpm.mnit_ToolsScheduleJobConsole':
+{
+rstModuleId = 'awb.appmanager';
+rTempParams = {'bpm.docid':'bpmarj','bpm.contentimageuri':'../epmstatic/awb/themes/common/images/CT_ScheduleModeJobConsole.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerInterfaceDS':
+{
+rstModuleId = 'awb.interfacedatasource';
+rTempParams = {'bpm.docid':'bpmaid','bpm.contentimageuri':'../epmstatic/awb/themes/common/images/CT_AdministerInterfaceDS.gif'};
+break;
+}
+case 'bpm.mnit_AdminClassicAppsConsolidation':
+{
+rstModuleId = 'hfmadf.administration';
+rTempParams = {'action':'adminstration','bpm.contentimageuri':'images/oracle/epm/fm/WS_HFMApps.gif'};
+break;
+}
+case 'bpm.mnit_AdminClassicAppsPlanning':
+{
+rstModuleId = 'HyperionPlanning.AppWizard';
+rTempParams = {'bpm.contentimageuri':'Images/CT_HPApps.gif'};
+break;
+}
+case 'bpm.mnit_aiflaunch1':
+{
+rstModuleId = 'aif.launch';
+rTempParams = {'bpm.contentimageuri':'../epmstatic/aif/images/general/application.gif'};
+break;
+}
+case 'bpm.mnit_ToolsAdministerCalculationManager':
+{
+rstModuleId = 'calcmgr.filterview';
+rTempParams = {'bpm.contentimageuri':'../epmstatic/calcmgr/themes/common/images/CT_AdminCalcManager.gif'};
+break;
+}
+case 'hss.mnit_ToolsAdministerUserManagement':
+{
+rstModuleId = 'cas.containers.tadpole';
+rTempParams = {'bpm.contentimageuri':'../workspace/static/images/com/oracle/workspace/repository/bpm/CT_AdministerModeUserManagement.gif'};
+break;
+}
+case 'bpm.mnit_ToolsViewerExplorer':
+{
+rstModuleId = 'cds.explorer';
+rTempParams = {'bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_ExploreMode.gif'};
+break;
+}
+case 'bpm.mnit_ToolsScheduleBatchScheduler':
+{
+rstModuleId = 'reporting.scheduler';
+rTempParams = {'bpm.contentimageuri':'/modules/com/hyperion/reporting/web/images/CT_ScheduleModeBatchScheduler.gif'};
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementSynchronizeMetadata':
+{
+rstModuleId = 'changeManagement.syncMetadata.schedule';
+rTempParams = {'allowFinish':'true','uriContextId':'changeManagement','bpm.modeListId':'syncMetadata','uri':'modules/com/hyperion/tools/changemgmt/syncMetadata/schedule/Adf.jsp','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeSynchronizeMetadata.gif'};
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementDataModelUpdates':
+{
+rstModuleId = 'changeManagement.datamodelUpdates';
+rTempParams = {'resourceContextId':'cds','allowFinish':'true','uriContextId':'changeManagement','bpm.modeListId':'datamodelUpdates','titleResourceId':'UpdateDataModelsLabel','uri':'modules/com/hyperion/tools/changemgmt/dataModelUpdate/Wizard.jsp','bpm.contentimageuri':'images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeDataModelUpdate.gif'};
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementJavascriptUpdates':
+{
+rstModuleId = 'changeManagement.javascriptUpdates';
+rTempParams = {'resourceContextId':'cds','allowFinish':'true','uriContextId':'changeManagement','bpm.modeListId':'javascriptUpdates','titleResourceId':'UpdateJavascriptLabel','uri':'modules/com/hyperion/tools/changemgmt/javascriptUpdate/Wizard.jsp','bpm.contentimageuri':'images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeJavascriptUpdates.gif'};
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementGenericUpdates':
+{
+rstModuleId = 'changeManagement.genericUpdates';
+rTempParams = {'resourceContextId':'cds','allowFinish':'true','uriContextId':'changeManagement','bpm.modeListId':'genericUpdates','titleResourceId':'CustomUpdateLabel','uri':'modules/com/hyperion/tools/changemgmt/genericUpdate/Wizard.jsp','bpm.contentimageuri':'images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeGenericUpdates.gif'};
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementShowTaskStatus':
+{
+rstModuleId = 'changeManagement.common.taskStatus';
+rTempParams = {'allowFinish':'true','uriContextId':'changeManagement','bpm.modeListId':'taskStatus','uri':'modules/com/hyperion/tools/changemgmt/common/taskStatus/Adf.jsp','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeJobStatus.gif'};
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementShowTaskList':
+{
+rstModuleId = 'changeManagement.manageTaskList.showTaskList';
+rTempParams = {'allowFinish':'true','uriContextId':'changeManagement','bpm.modeListId':'showTaskList','uri':'modules/com/hyperion/tools/changemgmt/manageTaskList/showTaskList/Adf.jsp','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeShowTaskList.gif'};
+break;
+}
+case 'bpm.mnit_ToolsChangeManagementShowImpactOfChange':
+{
+rstModuleId = 'tools.relatedcontent';
+rTempParams = {'repository_path':'/Administration/Impact Manager/Impact of Change','layout':'embedded','bpm.contentimageuri':'/images/com/hyperion/tools/cds/repository/bpm/CT_ChangeManagementModeImpactOfChange.gif'};
+break;
+}
+case 'bpm.mnu_ToolsInstallSmartView':
+{
+rstContextId = 'wksp';
+rstUri = 'http://www.oracle.com/technetwork/middleware/smart-view-for-office/overview/index.html';
+rstUriWindowName = 'avalancheInstallSmartView';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=yes';
+rstUriWorkspaceParams = 'none';
+break;
+}
+case 'bpm.mnu_ToolsInstallPredictivePlanning':
+{
+rstContextId = 'wksp';
+rstUri = bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '../bicontent/epmstatic/wspace/predictive_planning/predictiveplanning.exe');
+rstUriWindowName = 'avalancheInstallPredictivePlanning';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=yes';
+rstUriWorkspaceParams = 'none';
+break;
+}
+case 'bpm.mnu_ToolsInstallFR':
+{
+rstContextId = 'reporting';
+rstUri = bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '/jsp/shared/postLaunchUrl.jsp') + '?launch_url=' + encodeURIComponent(bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '/../hr/modules/com/hyperion/reporting/web/common/HRStudioRetrieve.jsp'));
+rstUriWindowName = 'workspaceInstallFR';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=no,width=0,height=0';
+rstUriWorkspaceParams = 'sso_token,LOCALE_LANGUAGE';
+break;
+}
+case 'bpm.mnu_ToolsInstallHFMx64':
+{
+rstContextId = 'hfmadf';
+rstUri = bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '../bicontent/epmstatic/wspace/hfm/HFMClientx64.exe');
+rstUriWindowName = 'avalancheInstallHfmClient';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=yes';
+rstUriWorkspaceParams = 'none';
+break;
+}
+case 'bpm.mnu_ToolsInstallHFMx86':
+{
+rstContextId = 'hfmadf';
+rstUri = bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '../bicontent/epmstatic/wspace/hfm/HFMClient.exe');
+rstUriWindowName = 'avalancheInstallHfmClient';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=yes';
+rstUriWorkspaceParams = 'none';
+break;
+}
+case 'bpm.mnit_ToolsInstallOfflinePlanning':
+{
+rstContextId = 'HyperionPlanning';
+rstUri = '/HyperionPlanning/../epmstatic/wspace/OfflinePlanning/Client/OfflinePlanning.exe';
+rstUriWindowName = 'offlinePlanningInstall';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=yes';
+rstUriWorkspaceParams = 'none';
+break;
+}
+case 'bpm.mnit_ToolsInstallSVExtension':
+{
+rstContextId = 'HyperionPlanning';
+rstUri = '/HyperionPlanning/../epmstatic/wspace/PlanningSmartviewExtension/PlanningSVExtension.msi';
+rstUriWindowName = 'SVExtensionInstall';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=yes';
+rstUriWorkspaceParams = 'none';
+break;
+}
+case 'bpm.mnu_ToolsLaunchFR':
+{
+rstContextId = 'reporting';
+rstUri = bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '/jsp/shared/postLaunchUrl.jsp') + '?launch_url=' + encodeURIComponent(bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '/../hr/modules/com/hyperion/reporting/web/reportViewer/HRStudioWebLaunch.jsp'));
+rstUriWindowName = 'workspaceInstallFR';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=no,width=0,height=0';
+rstUriWorkspaceParams = 'sso_token,LOCALE_LANGUAGE';
+break;
+}
+case 'bpm.mnu_ToolsLaunchFRWebStudio':
+{
+rstContextId = 'reporting';
+rstUri = bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '/jsp/shared/postLaunchUrl.jsp') + '?launch_url=' + encodeURIComponent(bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), '/../frdesigner/faces/index.jspx'));
+rstUriWindowName = 'workspaceFRWebStudio';
+rstUriOptions = 'toolbar=no,location=no,status=yes,scrollbars=no,personalbar=no,menubar=no,resizable=yes';
+rstUriWorkspaceParams = 'sso_token,LOCALE_LANGUAGE';
+break;
+}
+
+		default:
+		{
+			// See if it is an application
+			var	rApps = this.getApps();
+			var	rApp = rApps[rstId];
+			if (rApp)
+			{
+				this._loadApplicationParams(rApp, rTempParams);
+				rstModuleId = rApp.module;
+			}
+			break;
+		}
+	}
+	
+	if (rstModuleId)
+	{
+		var	rstDocId = "";
+		if (rTempParams && rTempParams[bpm.common.Constants.PARAM_DOCID])
+			rstDocId = rTempParams[bpm.common.Constants.PARAM_DOCID];
+		else if (rTempParams && rTempParams["bpm.modeListId"])	// TODO:  this needs to be removed and everyone should be using PARAM_DOCID.
+			rstDocId = rTempParams["bpm.modeListId"];
+		
+		var	rTabButton = this._findTabButtonByModuleId(this._generateUniqueDocId(rstModuleId, rstDocId));
+		if (rTabButton != null)
+		{
+			this.getModule()._rTabBar.setSelectedTabButtonId(rTabButton.getId());
+			
+			// Check for a singleton module that requires a 
+			// reinitialize call in this case. rModule will be 
+			// null if the module is NOT a singleton.
+			var bReinitialize = false;
+			var rModule = gModuleManager.getModuleById(rstModuleId);
+			if (rModule && gModuleManager.isModuleSingleton(rModule.getId()))
+			{
+				bReinitialize = true;
+			}
+			else
+			{
+				// Singleton document needs reinitialize too.
+				rModule = gModuleManager.getModuleById(rTabButton._rstModuleId);
+				if (rModule && rModule.getConfig().singletonDocument == "true")
+				{
+					bReinitialize = true;
+				}
+			}
+			if (bReinitialize)
+			{
+				gModuleManager.reinitialize(rModule, rTempParams);
+			}
+		}
+		else
+		{
+			this.loadModuleAsync(rstModuleId, rTempParams);
+		}
+	}
+	else if (rstUri)
+	{
+		// Adds locale param
+		if (rstUriWorkspaceParams == null)
+		{
+			rstUri += (rstUri.indexOf( '?' ) >= 0) ? "&" : "?";
+			rstUri += bpm.common.Constants.PARAM_LOCALE_LANGUAGE + "=" + encodeURIComponent(bpm.common.Utils.convertBrowserLanguageToJavaLocale(BpmStringBundle.getUserLanguage()));
+		}
+		if (rstUriWorkspaceParams != null && rstUriWorkspaceParams != "none")
+		{
+			rstUri += (rstUri.indexOf( '?' ) >= 0) ? "&" : "?";
+			rstUri += com.oracle.workspace.util.HSConstants.PARAM_WORKSPACE_PARAMS + "=" + encodeURIComponent(rstUriWorkspaceParams);
+			if (rstUriWorkspaceParams.indexOf(bpm.common.Constants.PARAM_LOCALE_LANGUAGE) >= 0)
+			{
+				rstUri += "&" + bpm.common.Constants.PARAM_LOCALE_LANGUAGE + "=" + encodeURIComponent(bpm.common.Utils.convertBrowserLanguageToJavaLocale(BpmStringBundle.getUserLanguage()));
+			}
+			if (rstUriWorkspaceParams.indexOf(bpm.common.Constants.PARAM_ACCESSIBILITY_MODE) >= 0)
+			{
+				rstUri += "&" + bpm.common.Constants.PARAM_ACCESSIBILITY_MODE + "=" + encodeURIComponent(application.getAccessibilityMode());
+			}
+			if (rstUriWorkspaceParams.indexOf(bpm.common.Constants.PARAM_THEME_SELECTION) >= 0)
+			{
+				rstUri += "&" + bpm.common.Constants.PARAM_THEME_SELECTION + "=" + encodeURIComponent(application.getTheme().getName());
+			}
+		}
+		if (rstContextId)
+		{
+			gContextManager.getContext(rstContextId).load();
+		}
+		gModuleManager.launchUri(rstUri, rstUriWindowName, rstUriOptions);
+	}
+};
+
+/**
+ * Base preferences initialization.  Loads the preferences panels.
+ */
+_p._initializePrefs = function()
+{
+	com.oracle.workspace.bindows.HSBaseContainerHandler.prototype._initializePrefs.call(this);
+	
+	this._aoPrefPanes = new Array();
+this.insertPrefsPane('wksp.prefsdialog.general','wksp.prefsdialog.general','General','static/images/com/oracle/workspace/repository/bpm/PrefsGeneral.gif');
+this.insertPrefsPane('cds.prefsdialog.auth','cds.prefsdialog.auth',BpmStringBundle.getString('cds-global','Prefs.Authenticate'),'../raframework/images/com/hyperion/tools/cds/repository/bpm/PrefsAuth.gif');
+this.insertPrefsPane('cds.prefsdialog.explorer','cds.prefsdialog.explorer',BpmStringBundle.getString('cds-global','Prefs.Explore'),'../raframework/images/com/hyperion/tools/cds/repository/bpm/PrefsExplorer.gif');
+this.insertPrefsPane('cds.prefsdialog.production','cds.prefsdialog.production',BpmStringBundle.getString('tools-global','Prefs.ProductionReporting'),'../raframework/images/com/hyperion/tools/cds/repository/bpm/PrefsProductionReporting.gif');
+this.insertPrefsPane('reporting.HRPrefs','reporting.HRPrefs',BpmStringBundle.getString('reporting-global','PrefsFinancialReporting'),'../hr/modules/com/hyperion/reporting/web/images/PrefsFinancialReporting.gif');
+this.insertPrefsPane('hfmadf.prefs','hfmadf.prefs',BpmStringBundle.getString('hfmadf-global','Consolidation'),'../hfmadf/images/oracle/epm/fm/WS_PrefsConsolidation.gif');
+this.insertPrefsPane('HyperionPlanning.prefs','HyperionPlanning.prefs',BpmStringBundle.getString('HyperionPlanning-global','Planning'),'../HyperionPlanning/Images/PrefsHyperionPlanning.gif');
+
+	this._aoStartupHandlers = new Array();
+var sName = 'None';
+if (sName && (sName.indexOf('\n') > 0))
+  sName = sName.substr(0, sName.indexOf('\n'));
+this._aoStartupHandlers[0] = {sId:'wksp.startup.none',sName:sName,sType:'None'};
+var sName = 'Application';
+if (sName && (sName.indexOf('\n') > 0))
+  sName = sName.substr(0, sName.indexOf('\n'));
+this._aoStartupHandlers[1] = {sId:'wksp.startup.app',sName:sName,sModule:'wksp.startupapp'};
+var sName = BpmStringBundle.getString('cds-global','Home');
+if (sName && (sName.indexOf('\n') > 0))
+  sName = sName.substr(0, sName.indexOf('\n'));
+this._aoStartupHandlers[2] = {sId:'cds.startuphomepage',sName:sName,sType:'Module',sItem:'wksp.relatedcontent',sParams:'repository_uuid=HomePage_wsp'};
+var sName = BpmStringBundle.getString('cds-global','Explore');
+if (sName && (sName.indexOf('\n') > 0))
+  sName = sName.substr(0, sName.indexOf('\n'));
+this._aoStartupHandlers[3] = {sId:'cds.startupexplorer',sName:sName,sModule:'cds.startupexplorer'};
+var sName = BpmStringBundle.getString('cds-global','Document');
+if (sName && (sName.indexOf('\n') > 0))
+  sName = sName.substr(0, sName.indexOf('\n'));
+this._aoStartupHandlers[4] = {sId:'cds.startupdocument',sName:sName,sModule:'cds.startupdocument'};
+var sName = BpmStringBundle.getString('cds-global','Favorite');
+if (sName && (sName.indexOf('\n') > 0))
+  sName = sName.substr(0, sName.indexOf('\n'));
+this._aoStartupHandlers[5] = {sId:'cds.startupfavorite',sName:sName,sModule:'cds.startupfavorite'};
+
+	var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+	for (var iIndex = 0; iIndex < raService.length; iIndex++)
+	{
+		try
+		{
+			if (raService[iIndex].isAvailable())
+				raService[iIndex].initializePrefs();
+		}
+		catch (ex)
+		{
+			var	rstDetail;
+			if (ex instanceof com.oracle.workspace.lang.HSThrowable)
+				rstDetail = ex.getDetailChain();
+			else
+				rstDetail = ex.message;
+			
+			bpm.common.MessageDialog.showDetailsDialog(
+				this._rBpmStringBundle.getString("ProcessErrorMsg"), 
+				rstDetail,
+				null,
+				BiOptionPane.getImageFromOptionType("error"));
+		}
+	}
+};
+
+/**
+ * Inserts the preferences pane at the given location.
+ *
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm}
+ *        sId Id of the preferences pane.
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm}
+ *        sModuleId The Id of the module implementing the pane.
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm}
+ *        sDisplayName The localized display name of pane.
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm}
+ *         sIcon The path to the icon shown in the dialog.
+ * @param {int}
+ *         iIndex The optional index for insertion.
+ */
+_p.insertPrefsPane = function(sId, sModuleId, sDisplayName, sIcon, iIndex)
+{
+	if (!iIndex)
+		iIndex = this._aoPrefPanes.length;
+	while (this._aoPrefPanes[iIndex])
+		iIndex++;
+
+	if (this.getPrefsPane(sId))
+		throw "A preferences pane with the id '" + sId + "' is already registered.";
+
+	var oPrefsPane = new Object();
+	oPrefsPane.sId = sId;
+	oPrefsPane.sModuleId = sModuleId;
+	oPrefsPane.sDisplayName = sDisplayName;
+	oPrefsPane.sIcon = sIcon;
+
+	this._aoPrefPanes[iIndex] = oPrefsPane;
+
+	this._iPrefsPaneCount++;
+	application.getComponentById("bpm.mnit_File_Prefs").setVisible(this._iPrefsPaneCount > 0);
+};
+
+_p._iPrefsPaneCount = 0;
+
+/**
+ * Removes the specified preferences pane.  Fails silently if the pane is not defined.
+ *
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm}
+ *        sId Id of the preferences pane.
+ */
+_p.removePrefsPane = function(sId)
+{
+	for (var iPrefsIndex = 0; iPrefsIndex < this._aoPrefPanes.length; iPrefsIndex++)
+	{
+		var oPref = this._aoPrefPanes[iPrefsIndex];
+		
+		if (oPref && (oPref.sId == sId))
+		{
+			delete this._aoPrefPanes[iPrefsIndex];
+			
+			this._iPrefsPaneCount --;
+			application.getComponentById("bpm.mnit_File_Prefs").setVisible(this._iPrefsPaneCount > 0);
+			break;
+		}
+	}
+};
+
+/**
+ * Gets the specified preferences pane. 
+ *
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm#1193137}
+ *        sId Id of the preferences pane.
+ * @return An object containing the preference pane, or null if not defined.
+ */
+_p.getPrefsPane = function(sId)
+{
+	var oRet = null;
+
+	for (var iPrefsIndex = 0; iPrefsIndex < this._aoPrefPanes.length; iPrefsIndex++)
+	{
+		var oPref = this._aoPrefPanes[iPrefsIndex];
+		if (oPref && (oPref.sId == sId))
+		{
+			oRet = oPref;
+			break;
+		}
+	}
+	return oRet;
+};
+
+/**
+ * Gets an array of preference pane IDs in display order.
+ *
+ * @return {Array} An Array of Strings containing preference pane IDs in display order.
+ */
+_p.getPrefsPanes = function()
+{
+	var asRet = new Array();
+	for (var iPrefsIndex = 0; iPrefsIndex < this._aoPrefPanes.length; iPrefsIndex++)
+	{
+		var oPref = this._aoPrefPanes[iPrefsIndex];
+		if (oPref)
+		{
+			asRet[asRet.length] = oPref.sId;
+		}
+	}
+	return asRet;
+};
+
+/**
+ * Gets the specified startup handler. 
+ *
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm#1193137}
+ *        sId Id of the preferences pane.
+ * @return An object containing the preference pane, or null if not defined.
+ */
+_p.getStartupHandler = function(sId)
+{
+	var oRet = null;
+
+	for (var iHandlerIndex = 0; iHandlerIndex < this._aoStartupHandlers.length; iHandlerIndex++)
+	{
+		var oHandler = this._aoStartupHandlers[iHandlerIndex];
+		if (oHandler && (oHandler.sId == sId))
+		{
+			oRet = oHandler;
+			break;
+		}
+	}
+	return oRet;
+};
+
+/**
+ * Gets an array of startup handler IDs in display order.
+ *
+ * @return {Array} An Array of Strings containing preference pane IDs in display order.
+ */
+_p.getStartupHandlers = function()
+{
+	var asRet = new Array();
+	for (var iHandlerIndex = 0; iHandlerIndex < this._aoStartupHandlers.length; iHandlerIndex++)
+	{
+		var oHandler = this._aoStartupHandlers[iHandlerIndex];
+		if (oHandler)
+		{
+			asRet[asRet.length] = oHandler.sId;
+		}
+	}
+	return asRet;
+};
+
+/**
+ * 
+ */
+_p.beforeClose = function()
+{
+	var	rPrefsManager = this.getPrefsManager();
+	try
+	{
+		var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+		for (var iIndex = 0; iIndex < raService.length; iIndex++)
+		{
+			if (raService[iIndex].isAvailable())
+				raService[iIndex].end();
+		}
+
+		gContextManager.removeEventListener(bpm.common.ContextManager.DEFAULT_PREFS_LOAD_EVENT,this._handleContextDefaultPrefsInitialize,this);
+		gContextManager.removeEventListener(bpm.common.ContextManager.CONTEXT_BEFORE_LOAD_EVENT,this._handleBeforeLoadContext,this);
+
+		application.getAdf().getXmlResourceParser()._removeObjectById(bpm.common.Constants.MENUITEM_ID_NAV_ADMINISTER_USER_MANAGEMENT);
+
+
+		// Need to call base class before close so that things will close properly when logging off or closing all.
+		return com.oracle.workspace.bindows.HSBaseContainerHandler.prototype.beforeClose.call(this);
+	}
+	catch (ex)
+	{
+		rPrefsManager.undoAllSetUserPrefs();
+
+		bpm.common.MessageDialog.showMessageDialog("failed to commit"); // TODO: Localize
+	}
+};
+
+/**
+ * Loads the Planning Landing page module in cloud mode only .
+ */
+_p._loadHome = function()
+{
+	var bEnableHomeButton = false;
+	var rParams = bpm.common.Utils.makeObjectFromString(this._startupParameters);
+	rParams[bpm.common.StartupContainerHandler.USER_HOME_PAGE] = true;
+	rParams["parentHandler"] = this;
+	
+	var rstStartupItem = "HyperionPlanning.AppWizard";
+	//var	rModule = gModuleManager.loadModule(rstStartupItem, rParams);
+	this.setReady(false);
+	this.loadModuleAsync(rstStartupItem, rParams);
+	bEnableHomeButton = true;
+	if (this._rToolBarButtonHome)
+		this._rToolBarButtonHome.setEnabled(bEnableHomeButton)
+}
+
+/**
+ * Loads the startup module for this container.
+ * The <code>startup</code> property has precedence over <code>startup</code>
+ * attribute at <code>BpmModuleConfig.xml</code>.
+ * @private
+ */
+_p._loadStartup = function(bSynch, bUsePrefs)
+{
+	this._startupParameters = bpm.common.Utils.getDesktop().getHandler().getStartupParameters();
+	var bEnableHomeButton = false;
+	var rstStartupModule = this.getStartup() || this.getModule().getConfig().startup;
+	if (gModuleManager.getDeploymentMode() == bpm.common.Constants.DEPLOYMENT_MODE_CLOUD && !rstStartupModule)
+	{
+		var rParams = bpm.common.Utils.makeObjectFromString(this._startupParameters);
+		rParams[bpm.common.StartupContainerHandler.USER_HOME_PAGE] = true;
+		rParams["parentHandler"] = this;
+		
+		var rstStartupItem = "HyperionPlanning.AppWizard";
+		//var	rModule = gModuleManager.loadModule(rstStartupItem, rParams);
+		this.setReady(false);
+		this.loadModuleAsync(rstStartupItem, rParams);
+		bEnableHomeButton = true;
+	}
+	else if (rstStartupModule && !bUsePrefs)
+	{
+		var	rParams = bpm.common.Utils.makeObjectFromString(this._startupParameters);
+		rParams[com.oracle.workspace.mode.Handler.USER_HOME_PAGE] = true;
+		
+		if (bSynch || (rstStartupModule == com.oracle.workspace.util.HSConstants.MODULE_ID_RELATED_CONTENT))
+		{
+			if (rstStartupModule == com.oracle.workspace.util.HSConstants.MODULE_ID_RELATED_CONTENT)
+			{
+				rParams["parentHandler"] = this;
+				var	rModule = gModuleManager.loadModule(rstStartupModule, rParams);
+			}
+			else
+				this.loadModule(rstStartupModule, rParams);
+		}
+		else
+		{
+			this.setReady(false);
+			this.loadModuleAsync(rstStartupModule, rParams);
+		}
+		bEnableHomeButton = true;
+	}
+	else
+	{
+		var rPrefsManager = this.getPrefsManager();
+		
+		// Startup preferences
+		var rstStartupType = rPrefsManager.getUserPref(com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE);
+		var rstStartupItem = rPrefsManager.getUserPref(com.oracle.workspace.util.HSConstants.PREF_STARTUP_ITEM);
+		var rstStartupParams = rPrefsManager.getUserPref(com.oracle.workspace.util.HSConstants.PREF_STARTUP_PARAMS);
+		
+		// Everything is in a try block so failure to load an initial module will not
+		// ruin the rest of the preferences/container bootup
+		try
+		{
+			if (rstStartupType)
+			{
+				switch (rstStartupType)
+				{
+					case com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_NONE:
+					{
+						break;
+					}
+					case com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_MODULE:
+					{
+						// The startup item is the module; startup options are the flags
+						var	rParams = bpm.common.Utils.makeObjectFromString(rstStartupParams);
+						rParams[bpm.common.StartupContainerHandler.USER_HOME_PAGE] = true;
+						
+						if (bSynch || (rstStartupItem == com.oracle.workspace.util.HSConstants.MODULE_ID_RELATED_CONTENT))
+						{
+							if (rstStartupItem == com.oracle.workspace.util.HSConstants.MODULE_ID_RELATED_CONTENT)
+							{
+								rParams["parentHandler"] = this;
+								var	rModule = gModuleManager.loadModule(rstStartupItem, rParams);
+							}
+							else
+								this.loadModule(rstStartupItem, rParams);
+						}
+						else
+						{
+							this.setReady(false);
+							this.loadModuleAsync(rstStartupItem, rParams);
+						}
+						
+						bEnableHomeButton = true;
+						break;
+					}
+					case com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_APPLICATION:
+					{
+						// The startup item is the module; startup option is the product.
+						var	rParams = new Object();
+						
+						if (rstStartupItem)
+						{
+							if(this.getApps()[rstStartupItem])
+							{
+								this._loadApplicationParams(this.getApps()[rstStartupItem], rParams);
+								rParams[bpm.common.StartupContainerHandler.USER_HOME_PAGE] = true;
+								this.handleNavigate(rstStartupItem, rParams);
+							}else 
+							{
+								this.setReady(false);
+								this.loadModuleAsync(rstStartupItem, rParams);
+							}
+							bEnableHomeButton = true;
+						}
+						break;
+					}
+				}
+			}
+		}
+		catch (ex)
+		{
+			if (!this.isReady())
+				this.setReady(true);
+			
+			// Bug #8669302 fix
+			bpm.common.MessageDialog.showMessageDialog(
+				this._rWkspStringBundle.getString("prefsdialogGeneralNewStartup"),
+				bpm.common.MessageDialog.B_CRITICAL);
+			
+			bEnableHomeButton = false;
+			//throw ex;
+		}
+	}
+	
+	if (this._rToolBarButtonHome)
+		this._rToolBarButtonHome.setEnabled(bEnableHomeButton);
+};
+
+/**
+ * Adds a navigate menu item to specified menu.
+ * @private
+ *
+ * @param {BiMenu http://www.bindows.net/documentation/api/BiMenu.html}
+ *        rMenu The menu to add the new menu item.
+ * @param {String http://docs.sun.com/source/816-6408-10/string.htm}
+ *        rstId The unique id associated with the menu item.
+ * @return {BiMenuItem http://www.bindows.net/documentation/api/BiMenuItem.html}
+ *         The menu item.
+ */
+_p._addNavigateMenuItem = function(rMenu, rstId)
+{
+	var	rModule = this.getModule();
+	var	rMenuItem = null;
+	if (rModule._raNavigate[rstId])
+	{
+		var rMenuItem = new BpmMenuItem();
+		rMenuItem.setId(rModule._raNavigate[rstId].menuId);
+		rMenuItem.setText(rModule._raNavigate[rstId].text);
+		if (rModule._raNavigate[rstId].menuImageUri)
+			rMenuItem.setIcon(
+				new BiImage(
+					rModule._raNavigate[rstId].menuImageUri,
+					bpm.common.Constants.MENU_IMAGE_WIDTH,
+					bpm.common.Constants.MENU_IMAGE_HEIGHT));
+		rMenuItem.addEventListener(bpm.common.Constants.EVENT_ACTION, bpm.desktop.Handler.onActionBar);
+		rMenu.add(rMenuItem);
+	}
+
+	return rMenuItem;
+};
+
+/**
+ * This public method will purge the current application lists for all registered
+ * applications, and then force a reload, registering predisplay handlers.
+ */
+_p.refreshMenuApplications = function()
+{
+	delete this._rProductApps;
+	this._buildApplicationLists(true);
+
+	for (var rstAppId in this._rProductApps)
+	{
+		if (this._rNavAppMenuHashtable[rstAppId]) // can be null if we're collapsing menu
+			this._rNavAppMenuHashtable[rstAppId].removeAll();
+		if (this._rOpenAppMenuHashtable[rstAppId]) // can be null if we're collapsing menu
+			this._rOpenAppMenuHashtable[rstAppId].removeAll();
+	}
+	if (!this._rNavAppSubMenu.hasListeners(bpm.common.Constants.EVENT_BEFORESHOW))
+	{
+		this._rNavAppSubMenu.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, this._buildNavigateAppSubMenu, this);
+	}
+	if (!this._rOpenAppSubMenu.hasListeners(bpm.common.Constants.EVENT_BEFORESHOW))
+	{
+		this._rOpenAppSubMenu.addEventListener(bpm.common.Constants.EVENT_BEFORESHOW, this._buildOpenAppSubMenu, this);
+	}
+};
+
+
+_p._buildSubMenuApplications = function(appMenuHashtable ,  appMenuItemHashtable ,  appSubMenu)
+{
+	var	rstAppId;
+	var	rMenuData;
+	var	bHasApps = false;
+	var raTaxProductApps = new Array();
+	var raProductApps;
+	var raNonTaxProductApps;
+	for (var iIndex = 0; iIndex < com.oracle.workspace.mode.Handler.ENUMERATED_APPS_LIST.length; iIndex++)
+	{
+		rstAppId = com.oracle.workspace.mode.Handler.ENUMERATED_APPS_LIST[iIndex];
+		rMenuData = com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[iIndex];
+		raProductApps = this.getAppsByProduct(rstAppId);
+		raNonTaxProductApps = new Array();
+		if (raProductApps != null)
+		{
+			for (var jIndex = 0; jIndex < raProductApps.length; jIndex++)
+			{
+				if (raProductApps[jIndex].menuId != null && raProductApps[jIndex].menuId == "bpm.mnit_tax_provisioning")
+				{
+					raTaxProductApps.push(raProductApps[jIndex]);
+					raProductApps[jIndex]._menuId = rMenuData._menuId + raProductApps.length;
+				}
+				else
+				{
+					raNonTaxProductApps.push(raProductApps[jIndex]);
+				}
+			}
+		}
+		// Enumerate the actual apps.
+		if (appMenuHashtable[rstAppId])
+		{
+			this._buildMenuApplications(
+				rstAppId,
+				raNonTaxProductApps,
+				appMenuHashtable[rstAppId],
+				appMenuItemHashtable[rstAppId],
+				rMenuData._menuId,
+				rMenuData._menuIcon,
+				bpm.desktop.Handler.onActionBar,
+				this);
+			
+			bHasApps = bHasApps || appMenuItemHashtable[rstAppId].getVisible();
+		}
+		else
+		{
+			// _rNavAppMenuHashtable for specified "rstAppId" can be absent in case when app instances are collapsed 
+			// it means that at least one application exist
+			bHasApps = true;
+		}
+	}
+	
+	var	raItems = appSubMenu.getMenuItems();
+	var	raAppendItems = new Array();
+	for (var iItem = 0; iItem < raItems.length; iItem++)
+	{
+		var	rItem = raItems[iItem];
+		
+		if (rItem.getId().match(/bpm.mnit_Nav_App_NoApplications/))
+		{
+			raAppendItems.push(rItem);
+			
+			if (rItem.getId() == "bpm.mnit_Nav_App_NoApplications")
+			{
+				rItem.setEnabled(false);
+				rItem.setVisible(!bHasApps && (raItems.length == (com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA.length + 3)));
+			}
+		}
+		if (rItem.getId().match(/bpm.mnit_Open_App_NoApplications/))
+		{
+			raAppendItems.push(rItem);
+
+			if (rItem.getId() == "bpm.mnit_Open_App_NoApplications")
+			{
+				rItem.setEnabled(false);
+				rItem.setVisible(!bHasApps && (raItems.length == (com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA.length + 3)));
+			}
+		}
+		if (rItem.getId() == "bpm.mnit_tax_management" || rItem.getId() == "bpm.mnit_tax_managementFile")
+		{
+			var subArray = rItem.getSubMenu();
+			subArray = subArray.getMenuItems();
+			if (subArray != null && subArray.length != 0)
+			{
+				for(var kItem = 0; kItem < subArray.length; kItem++)
+				{
+					if (subArray[kItem].getId() == "bpm.mnit_tax_provisioning" || subArray[kItem].getId() == "bpm.mnit_tax_provisioning_file")
+					{
+						if (subArray[kItem].getSubMenu() != null)
+						{
+							subArray[kItem].getSubMenu().removeAll();
+						}
+						
+						if (raTaxProductApps.length != 0)
+						{
+							subArray[kItem].setVisible(true);
+							if (subArray[kItem].getSubMenu() == null)
+							{
+								var taxMenu = new BpmMenu();
+								subArray[kItem].setSubMenu(taxMenu);
+								if (application.getAccessibilityMode())
+								{
+									this.getActionBarDef().getMenuComponent("bpm.mnit_tax_provisioning");
+									this.getActionBarDef().getMenuComponent("bpm.mnit_tax_provisioning_file");
+								}
+							}
+							for(var k = 0; k < raTaxProductApps.length; k++)
+							{
+								var taxSubMenu = new BpmMenuItem( raTaxProductApps[k].id )
+								taxSubMenu.setId(raTaxProductApps[k]._menuId);
+								taxSubMenu.setText(raTaxProductApps[k].name);
+								taxSubMenu.setUserData(raTaxProductApps[k].id);
+								taxSubMenu.setIcon(new BiImage("../hfmadf/images/oracle/epm/fm/WS_HFMAppsTax.png"));
+								taxSubMenu.addEventListener(bpm.common.Constants.EVENT_ACTION, bpm.desktop.Handler.onActionBar,this);
+								subArray[kItem].getSubMenu().add(taxSubMenu);
+								if (application.getAccessibilityMode()) 
+									this.getActionBarDef().smartMerge(bpm.common.Utils.getMenuBar());
+							}
+							rItem.setVisible(true);
+						}
+						else
+						{
+							subArray[kItem].setVisible(false);
+							if (subArray[kItem].getSubMenu() == null)
+							{
+								var taxMenu = new BpmMenu();
+								subArray[kItem].setSubMenu(taxMenu);
+							}
+							if (subArray.length <= 1)
+								rItem.setVisible(false);
+						}
+					}
+				}
+			}
+			else
+			{
+				rItem.setVisible(false);
+			}
+		}
+	}
+	
+	for (var iItem = 0; iItem < raAppendItems.length; iItem++)
+	{
+		// Remove could potentially disposed our item.  Short-circuit the GC in this case.
+		raAppendItems[iItem]._disposed = true;
+		appSubMenu.remove(raAppendItems[iItem]);
+		appSubMenu.add(raAppendItems[iItem]);
+		raAppendItems[iItem]._disposed = false;
+	}
+};
+
+_p._buildOpenAppSubMenu = function(rEvent)
+{
+	// Don't change to use target.  It's the real menu, not the
+	// BpmMenu.
+	this._rOpenAppSubMenu.removeEventListener(bpm.common.Constants.EVENT_BEFORESHOW, this._buildOpenAppSubMenu, this);
+	this._buildSubMenuApplications(this._rOpenAppMenuHashtable,this._rOpenAppMenuItemHashtable,this._rOpenAppSubMenu);
+	
+};
+
+_p._buildAppMenu = function(rAppMenu, rAppMenuItem, rAppSubMenu)
+{
+	var	rMenuItem;
+	var	rSubMenu;
+
+	// Enumerate the possible products with apps.
+	var	rstAppId;
+	var	rMenuData;
+	for (var iIndex = 0; iIndex < com.oracle.workspace.mode.Handler.ENUMERATED_APPS_LIST.length; iIndex++)
+	{
+		rstAppId = com.oracle.workspace.mode.Handler.ENUMERATED_APPS_LIST[iIndex];
+		rMenuData = com.oracle.workspace.mode.Handler.ENUMERATED_APPS_MENUDATA[iIndex];
+		rMenuItem = new BpmMenuItem();
+		rMenuItem.setId(rMenuData._menuId);
+		rMenuItem.setText(rMenuData._menuName);
+		rMenuItem.setIcon(new BiImage(rMenuData._menuIcon));
+		rAppMenu.add(rMenuItem);
+
+		// If collapseSingleInstance attribute is "true", and if there is exactly one instance, 
+		// then instead of creating the product-level menu item, the product-level submenu, 
+		// and the instance menu item, we will create only the product-level menu item.  
+		// It will have the menu ID and use the localized resource as specified in the WorkspaceAppInstances element.  
+		// It will *not* use the instance name or id in the menu item!  
+		// Clicking on the product-level menu item will do the same product launch logic as the instance menu item did.
+		var raProductApps = this.getAppsByProduct(rstAppId);
+
+		if (raProductApps && raProductApps.length == 1 && (raProductApps[0].collapseSingleInstance === "true"))
+		{	// should be done only if 
+			// 	1) Only single instance exists
+			// 	2) "collapseSingleInstance == true" 
+			rMenuItem.setUserData(raProductApps[0].id);
+			rMenuItem.addEventListener(bpm.common.Constants.EVENT_ACTION, bpm.desktop.Handler.onActionBar, this);
+		}
+		else // Zero apps, more than one app, or non-collapsing single app
+		{
+			rSubMenu = new BpmMenu();
+			rSubMenu.setId(rstAppId._menuId + "AutoMenu");
+			rMenuItem.setSubMenu(rSubMenu);
+			rMenuItem.setVisible(false);
+			rAppSubMenu[rstAppId] = rSubMenu;
+		}
+
+		rAppMenuItem[rstAppId] = rMenuItem;
+	}
+};
+
+_p._buildNavigateAppSubMenu = function(rEvent)
+{
+	// Don't change to use target.  It's the real menu, not the BpmMenu.
+	this._rNavAppSubMenu.removeEventListener(bpm.common.Constants.EVENT_BEFORESHOW, this._buildNavigateAppSubMenu, this);
+	this._buildSubMenuApplications(this._rNavAppMenuHashtable,this._rNavAppMenuItemHashtable,this._rNavAppSubMenu);
+	
+};
+
+/**
+ * Builds the menus for applications list for Navigate, Open and Preferences.
+ */
+_p._buildMenuApplications = function(rstProductId, raProductApps, rProductMenu, rGroupMenuItem, rstAppMenuItemId, rstImageUri, rMenuItemActionHandlerCallback, rMenuItemActionHandlerCallee, rMenuItemType)
+{
+	if (raProductApps)
+	{
+		var	rMenuItem;
+
+		if (raProductApps && raProductApps.length > 0)
+		{
+			//we need to "removeAll" here because of possible call through the call stack starting with "handleActionBar" function when userData="bpm.mnu_App" 
+			//(then "_buildNavigateAppSubMenu" and then "_buildMenuApplications" will be called w/o calling to "removeAll" in "refreshMenuApplications")
+			rProductMenu.removeAll();
+
+			var rMenuItem;
+			for (var iIndex = 0; iIndex < raProductApps.length; iIndex++)
+			{
+				if (rMenuItemType instanceof BiRadioGroup)
+				{
+					rMenuItem = new BpmRadioButtonMenuItem();
+					rMenuItem.setGroup(rMenuItemType);
+				}
+				else
+				{
+					rMenuItem = new BpmMenuItem();
+				}
+				rMenuItem.setId(rstAppMenuItemId + iIndex);
+
+				if (rMenuItemType instanceof BiRadioGroup)
+				{
+					rMenuItem.setHtml(
+						"<img src=\"" +
+						bpm.common.Utils.escapeHtml(rstImageUri) +
+						"\" height=\"" +
+						com.hyperion.tools.cds.repository.bpm.mode.Handler.MENU_IMAGE_HEIGHT +
+						"\" width=\"" +
+						com.hyperion.tools.cds.repository.bpm.mode.Handler.MENU_IMAGE_WIDTH +
+						"\">&nbsp;" +
+						bpm.common.Utils.escapeHtml(raProductApps[iIndex].name));
+				}
+				else
+				{
+					rMenuItem.setText(raProductApps[iIndex].name);
+					rMenuItem.setIcon(new BiImage(rstImageUri));
+				}
+				rMenuItem.setUserData(raProductApps[iIndex].id);
+				rMenuItem.addEventListener(bpm.common.Constants.EVENT_ACTION, rMenuItemActionHandlerCallback, rMenuItemActionHandlerCallee);
+				rProductMenu.add(rMenuItem);
+			}
+			rGroupMenuItem.setVisible(true);
+		}
+		else
+		{
+			rGroupMenuItem.setVisible(false);
+		}
+	}
+	else
+	{
+		if (rGroupMenuItem != null)
+			rGroupMenuItem.setVisible(false);
+	}
+};
+
+/**
+ * Builds the applications list by getting the information from the hub.
+ */
+_p._buildApplicationLists = function(bRefresh)
+{
+	if (typeof this._rProductApps == "undefined")
+	{
+		var appsListUrl = "modules/com/oracle/workspace/mode/modeApps.jsp";
+		if (bRefresh)
+		{
+			appsListUrl = appsListUrl + "?refresh=true";
+		}
+
+		eval(BiTextLoader.load(appsListUrl));
+	}
+};
+
+/**
+ * Builds the applications list by getting the information from the hub.
+ */
+_p._loadApplicationParams = function(rApp, rParamHashtable)
+{
+	if (rApp)
+		rParamHashtable[bpm.common.Constants.MRU_ID] = rApp.id + bpm.common.Constants.MRU_TYPE_APPLICATION;
+
+	for (var rValue in rApp.params)
+	{
+		rParamHashtable[rValue] = rApp.params[rValue];
+	}
+};
+
+/**
+ * Gets the hashmap of all applications.
+ */
+_p.getApps = function()
+{
+	this._buildApplicationLists();
+	return this._rApps;
+};
+
+/**
+ * Gets the hashmap of all applications for a specific product.
+ */
+_p.getAppsByProduct = function(rstProductId)
+{
+	this._buildApplicationLists();
+	if (this._rProductApps)
+	{
+		if (this._rProductApps[rstProductId])
+			return this._rProductApps[rstProductId];
+		else
+			return this._rProductApps[rstProductId.toUpperCase()];
+	}
+	else
+		return null;
+};
+
+/**
+ * Gets the direct (non-proxied) URL for CAS.
+ */
+_p.getCasUrl = function()
+{
+	return bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(), "../interop");
+};
+
+/**
+ *
+ */
+_p.getCachedFavoriteNodes = function()
+{
+	var	rFavoriteNodes = null;
+	var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+	for (var iIndex = 0; iIndex < raService.length && rFavoriteNodes == null; iIndex++)
+	{
+		if (raService[iIndex].isAvailable())
+			rFavoriteNodes = raService[iIndex].getCachedFavoriteNodes();
+	}
+	return rFavoriteNodes;
+};
+
+/**
+ *
+ */
+_p.commitMruListChanges = function()
+{
+	var	raService = com.oracle.workspace.services._rServiceFactory.getServices();
+	for (var iIndex = 0; iIndex < raService.length; iIndex++)
+	{
+		if (raService[iIndex].isAvailable())
+			raService[iIndex].commitMruListChanges();
+	}
+};
+
+/**
+ *
+ */
+
+_p.getCanChangePassword = function()
+{
+	return true;
+};
+
+
+/**
+ * Loads user preferences
+ * The <code>startup</code> property has precedence over <code>startup</code>
+ * attribute at <code>BpmModuleConfig.xml</code>.
+ * @private
+ */
+_p._loadPrefs = function()
+{
+	var	oLogger = this.getModule()._oLogger;
+	if (oLogger.isDebug())
+		oLogger.debug("_loadPrefs: start");
+
+	// This is a population of the structures created by initializeUser()
+	this._oPrefsManager = new bpm.prefs.PrefsManager(
+		{id:'wksp',url:bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(),'./prefs'),regexps:[/.*/]},
+		[{id:'cds',url:bpm.common.Utils.joinPaths(gModuleManager.getStartupContextPath(),'../raframework/browse/prefsrpc'),regexps:[/^com.hyperion.cds.prefs.iserver.*/,/^com.hyperion.cds.prefs.production.*/,/^com.hyperion.cds.prefs.pt.*/,/^com.hyperion.bpm.mruitem/,/com.hyperion.bpm.general.Email.AddressBook/,/^com.hyperion.cds.prefs.explorer.*/,/^com.hyperion.tools.cds.repository.bpm.explorer.*/,/^com.hyperion.tools.cds.repository.bpm.filedialog.*/,/^com.hyperion.tools.cds.repository.bpm.mode.DefaultExplorerFolder$/,/^com.hyperion.tools.cds.repository.bpm.mode.DefaultNewFolder$/,/^com.hyperion.reporting.*$/]}]);
+	this._oPrefsManager._oUserToPrefsHashtable[""] = {};
+	this._oPrefsManager._oUserToNewPrefsHashtable[""] = {};
+	this._oPrefsManager._oUserToDeletePrefsHashtable[""] = [];
+	
+	try
+	{
+
+		this._oPrefsManager._oUserToPrefsHashtable[""] = {'com.hyperion.tools.cds.repository.bpm.mode.ShowPathForDocuments':'true','com.hyperion.tools.cds.repository.bpm.mode.DefaultPalette':'Info','com.hyperion.bpm.general.SelectTheme':'Skyros','com.hyperion.tools.cds.repository.bpm.mode.StartupHandler':'cds.startuphomepage','com.hyperion.tools.cds.repository.bpm.mode.PromptForSave':'true','com.hyperion.tools.cds.repository.bpm.mode.StartupType':'Module','com.hyperion.tools.cds.repository.bpm.explorer.showHiddenKey':'false','com.hyperion.tools.cds.repository.bpm.mode.StartupItem':'wksp.relatedcontent','com.hyperion.tools.cds.repository.bpm.mode.AccessibilityMode':'false','com.hyperion.tools.cds.repository.bpm.mode.MigratedFromCds':'true','com.hyperion.tools.cds.repository.bpm.mode.StartupParams':'repository_uuid=HomePage_wsp'};
+
+	}
+	catch (rException)
+	{
+		bpm.common.MessageDialog.showMessageDialog(
+			"Failed to load user preferences: " + rException.message, // TODO: localize
+			bpm.common.MessageDialog.B_CRITICAL);
+	}
+	
+	// This block is for migration of the Workspace prefs from Cds
+	if (true)
+	{
+		// Get the Cds service
+		var CDS_CONTEXTID = "cds";
+		var rCdsService = com.oracle.workspace.services._rServiceFactory.getService(CDS_CONTEXTID);
+		if (rCdsService)
+		{
+			// Get the Cds prefs map cached at startup (pending to be set)
+			var rCdsPrefsMap = rCdsService.getCachedPrefsMap();
+			if (rCdsPrefsMap)
+			{
+				// Get the Cds prefs regexps
+				var raCdsPrefsRegExp = null;
+				for (var iSecondaryContext = 0; raCdsPrefsRegExp == null && iSecondaryContext < this._oPrefsManager._aoSecondaryContext.length; iSecondaryContext++)
+				{
+					var rSecondaryContext = this._oPrefsManager._aoSecondaryContext[iSecondaryContext];
+					if (rSecondaryContext.id == CDS_CONTEXTID)
+					{
+						raCdsPrefsRegExp = rSecondaryContext.regexps;
+					}
+				}
+				if (raCdsPrefsRegExp)
+				{
+					// See if we haven't migrated from Cds
+					var bMigratedFromCds = this._oPrefsManager.getUserPref(com.oracle.workspace.util.HSConstants.PREF_MIGRATED_FROM_CDS) == Boolean(true).toString();
+					if (!bMigratedFromCds)
+					{
+						// Manipulate the startup prefs
+						var rstStartupType = rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE];
+						var rstStartupItem = rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_ITEM];
+						var rstStartupOption = rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_OPTION];
+						var rstStartupHandler = null;
+						var rstStartupHandlerParams = null;
+						var rstStartupParams = null;
+						var bPrefsInCds = true;
+						if (rstStartupType == com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_NONE)
+						{
+							// None
+							rstStartupType = com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_NONE;
+							rstStartupItem = null;
+							rstStartupOption = null;
+							rstStartupHandler = com.oracle.workspace.util.HSConstants.STARTUP_HANDLER_NONE;
+							rstStartupHandlerParams = null;
+							rstStartupParams = rstStartupHandlerParams;
+						}
+						else if (rstStartupType == com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_MODULE &&
+								 rstStartupItem == com.oracle.workspace.util.HSConstants.MODULE_ID_EXPLORER)
+						{
+							// Explorer
+							rstStartupType = com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_MODULE;
+							rstStartupItem = com.oracle.workspace.util.HSConstants.MODULE_ID_EXPLORER;
+							rstStartupOption = null;
+							rstStartupHandler = com.oracle.workspace.util.HSConstants.STARTUP_HANDLER_EXPLORER;
+							rstStartupHandlerParams = null;
+							rstStartupParams = rstStartupHandlerParams;
+						}
+						else if (rstStartupType == com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_UUID &&
+								 rstStartupItem &&
+								 rstStartupOption == com.oracle.workspace.util.HSConstants.PREF_STARTUP_OPTION_DOCUMENT)
+						{
+							// Document
+							var rstUuid = rstStartupItem;
+							rstStartupType = com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_MODULE;
+							rstStartupItem = com.oracle.workspace.util.HSConstants.MODULE_ID_RELATED_CONTENT;
+							rstStartupOption = null;
+							rstStartupHandler = rstUuid == com.oracle.workspace.util.HSConstants.UUID_HOMEPAGE ?
+								com.oracle.workspace.util.HSConstants.STARTUP_HANDLER_HOMEPAGE :
+								com.oracle.workspace.util.HSConstants.STARTUP_HANDLER_DOCUMENT;
+							rstStartupHandlerParams = rstUuid == com.oracle.workspace.util.HSConstants.UUID_HOMEPAGE ?
+								null :
+								com.hyperion.tools.cds.CDSCommand.REPOSITORY_UUID + "=" + encodeURIComponent(rstUuid);
+							rstStartupParams = com.hyperion.tools.cds.CDSCommand.REPOSITORY_UUID + "=" + encodeURIComponent(rstUuid);
+						}
+						else if (rstStartupItem &&
+								 rstStartupOption == com.oracle.workspace.util.HSConstants.PREF_STARTUP_OPTION_FAVORITE)
+						{
+							// Favorite
+							var iPersonalPageId = -1;
+							var rstUuid = rstStartupItem;
+							var rastUuidPart = rstUuid.split(",");
+							if (rastUuidPart.length == 2 && rastUuidPart[0] == com.hyperion.tools.cds.data.HSRepository.NODETYPE_UUID_PORTAL_PAGE)
+							{
+								iPersonalPageId = Number(rastUuidPart[1]);
+							}
+							rstStartupType = com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_MODULE;
+							rstStartupItem = iPersonalPageId >= 0 ?
+								com.oracle.workspace.util.HSConstants.MODULE_ID_PERSONAL_PAGES :
+								com.oracle.workspace.util.HSConstants.MODULE_ID_RELATED_CONTENT;
+							rstStartupOption = null;
+							rstStartupHandler = com.oracle.workspace.util.HSConstants.STARTUP_HANDLER_FAVORITE;
+							rstStartupHandlerParams = iPersonalPageId >= 0 ?
+								com.hyperion.tools.cds.CDSCommand.SMART_PAGE_ID + "=" + encodeURIComponent(iPersonalPageId) + "&" +
+								com.hyperion.tools.cds.CDSCommand.REPOSITORY_UUID + "=" + encodeURIComponent(com.oracle.workspace.util.HSConstants.MODULE_ID_PERSONAL_PAGES + "." + iPersonalPageId) :
+								com.hyperion.tools.cds.CDSCommand.REPOSITORY_UUID + "=" + encodeURIComponent(rstUuid);
+							rstStartupParams = rstStartupHandlerParams;
+						}
+						else if (rstStartupType == com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_APPLICATION &&
+								 rstStartupItem &&
+								 rstStartupOption)
+						{
+							// Application
+							var rstModuleId = rstStartupItem;
+							var rstAppInfo = rstStartupOption;
+							if (rstModuleId == com.oracle.workspace.util.HSConstants.MODULE_ID_HP_APPLICATION)
+							{
+								var rstNewAppPrefix = "PLANNING_LWA_";
+								if (rstAppInfo.indexOf(rstNewAppPrefix) != 0)
+								{
+									var rstOldAppPrefix = "Default_";
+									if (rstAppInfo.indexOf(rstOldAppPrefix) == 0)
+									{
+										rstAppInfo = rstAppInfo.substr(rstOldAppPrefix.length);
+									}
+									rstAppInfo = rstNewAppPrefix + rstAppInfo;
+								}
+							}
+							else if (rstModuleId == com.oracle.workspace.util.HSConstants.MODULE_ID_HFM_APPLICATION)
+							{
+							}
+							rstStartupType = com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_APPLICATION;
+							rstStartupItem = rstAppInfo;
+							rstStartupOption = null;
+							rstStartupHandler = com.oracle.workspace.util.HSConstants.STARTUP_HANDLER_APPLICATION;
+							rstStartupHandlerParams = null;
+							rstStartupParams = rstStartupHandlerParams;
+						}
+						else if (rstStartupType == com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_MODULE &&
+								 rstStartupItem == com.oracle.workspace.util.HSConstants.MODULE_ID_HPS_BROWSER &&
+								 rstStartupOption)
+						{
+							// Make sure the namespace is loaded, as we use its' constants below
+							com.oracle.workspace.prefsdialog.startuphps.load();
+							
+							// Scorecard
+							var rstParams = rstStartupOption;
+							var rstLabel = "";
+							if (rstParams.search(/(.*):&(.*)/) != -1)
+							{
+								rstLabel = RegExp.$1;
+								rstParams = RegExp.$2;
+							}
+							rstStartupType = com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_MODULE;
+							rstStartupItem = com.oracle.workspace.util.HSConstants.MODULE_ID_HPS_BROWSER;
+							rstStartupOption = null;
+							rstStartupHandler = com.oracle.workspace.util.HSConstants.STARTUP_HANDLER_SCORECARD;
+							rstStartupHandlerParams =
+								bpm.common.Constants.MODULEID + "=" + encodeURIComponent(com.oracle.workspace.util.HSConstants.MODULE_ID_HPS_BROWSER) + "&" +
+								com.oracle.workspace.prefsdialog.startuphps.Module.PARAM_LABEL + "=" + encodeURIComponent(rstLabel) + "&" +
+								rstParams;
+							rstStartupParams =
+								rstParams;
+						}
+						else
+						{
+							bPrefsInCds = false;
+						}
+						
+						// Update the startup prefs
+						if (bPrefsInCds)
+						{
+							rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE] = rstStartupType;
+							rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_ITEM] = rstStartupItem;
+							rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_OPTION] = rstStartupOption;
+							rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_HANDLER] = rstStartupHandler;
+							rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_HANDLER_PARAMS] = rstStartupHandlerParams;
+							rCdsPrefsMap[com.oracle.workspace.util.HSConstants.PREF_STARTUP_PARAMS] = rstStartupParams;
+						}
+					}
+					
+					// Loop over each Cds pref name
+					for (var rstCdsPrefName in rCdsPrefsMap)
+					{
+						// See if the Cds pref name matches the Cds prefs regexps
+						var bMatch = false;
+						for (var iRegExp = 0; !bMatch && iRegExp < raCdsPrefsRegExp.length; iRegExp++)
+						{
+							bMatch = raCdsPrefsRegExp[iRegExp].test(rstCdsPrefName);
+						}
+						if (!bMatch)
+						{
+							// See if we haven't migrated from Cds
+							if (!bMigratedFromCds)
+							{
+								// Set the Workspace pref (forcing an update)
+								this._oPrefsManager.setUserPref(rstCdsPrefName, rCdsPrefsMap[rstCdsPrefName]);
+							}
+							
+							// Delete the Workspace pref from the Cds prefs (pending to be set)
+							delete rCdsPrefsMap[rstCdsPrefName];
+							// TODO: Can we actually delete it from Cds (and not do this all the time)?
+						}
+					}
+					
+					// See if we haven't migrated from Cds
+					if (!bMigratedFromCds)
+					{
+						// Set the Workspace pref flagging a migration
+						this._oPrefsManager.setUserPref(com.oracle.workspace.util.HSConstants.PREF_MIGRATED_FROM_CDS, Boolean(true).toString());
+						
+						// Commit the Workspace prefs
+						try
+						{
+							this._oPrefsManager.commitUserPrefs();
+						}
+						catch (e)
+						{
+							bpm.common.MessageDialog.showDetailsDialog(
+								this._rBpmStringBundle.getString("ProcessErrorMsg"), 
+								e.getMessage ? e.getMessage() : "" + e,
+								null,
+								BiOptionPane.getImageFromOptionType("error"));
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (oLogger.isDebug())
+		oLogger.debug("_loadPrefs: end");
+	
+	
+	if (application.getAccessibilityMode()) {
+		var startupParam = this._oPrefsManager.getUserPref(com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE);
+		if((startupParam == null) || (startupParam == com.oracle.workspace.util.HSConstants.PREF_STARTUP_TYPE_NONE)) {
+			bpm.common.MessageDialog.showMessageDialog(
+				this._rBpmStringBundle.getFormattedString(
+				"LogonSuccessfulMessage",
+				this._rBpmStringBundle.getString("MenuShortcutName_CTRL") + this._rBpmStringBundle.getString("MenuShortcutSeparator") + "L",
+				this._rBpmStringBundle.getString("MenuShortcutName_F10")),
+				bpm.common.MessageDialog.B_OK, 
+				bpm.common.MessageDialog.M_INFO);
+		}
+	}
+};
+
+		]]></Script>
+	</Resources>
+</Application>
+
+
+
+
+==================获取EPMWS_session
+
+http://192.168.60.125:19000/raframework/browse/dyn
+POST /raframework/browse/dyn HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: */*
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/workspace/index.jsp?framed=true
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+ora_epm_ctg: z%2BiOXJMzfUW1kNWLSdTuYtPvc3nYodDsj4qYYsbLjLDAs0wdSPm3ka2QOc7YhqUV
+Content-Length: 624
+DNT: 1
+Connection: keep-alive
+Cookie: ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros
+
+page=/conf/CDSConfig.jsp
+amp
+action=returnXML
+LOCALE_LANGUAGE=en_US
+rightToLeft=false
+accessibilityMode=false
+themeSelection=Skyros
+sso_token=iu5vzkbSczqmBcC/dCVUXAp7jFN+xEtiE0/PaIEfnqt1l2DnD6suwRbIkjSW4KMy/WGpE/y20c8EWHGL3okELANJofAsfsG9N+U5plQtYCfPi59Y397Zmm2J8U5rNGl+dAMtBVHPfnY7xVR7VCwo/UvUqQ+7+ywIytHFjhEeanxY7D92ZEu06ALJv/vE38fiyYQkTB4rOvN9gQJoInVR16J7KRinetemGsulXisFVaAJBWS0dp20K8p9gTurWsRkOevHQT/INDXvaO9CTgJFefacRCOa3WUhQAKUrJskltTfWir6/h8RrJCtXiJercRet38BTwH77VS6rK8uHucxec1PPQzIej/uPKu84cRz5VTiF9KAefv3mSocdlr7p7ZT5O2zy5znUj0RGPlgIMJmwKbXGHybDwDvDz0zG7K0vqkIpO/cCY8FQ6oHbuoK9aVP
+
+
+HTTP/1.1 200 OK
+Date: Tue, 04 Dec 2018 12:25:02 GMT
+Server: Oracle-Application-Server-11g
+Cache-Control: private
+Expires: 0
+Last-Modified: Tue, 04 Dec 2018 12:25:02 GMT
+X-SSO-Login-Status: 1
+Set-Cookie: ORA_EPMWS_session=c52f739b0eefaaa8664c4a461e794b16ef12d8d3960dec31163d9ee9230037835a8f74896422e6c7f1f05a810b77dd44907147cc5ca7da0948ecb9f9b11242d9b0112f59a3ec80e5e831e2490e5f5ead490fbb882ca093650b79fa04fe9276ef8a1ec79a5dd50b07ef0099b62ffa2adcfc2083349a1c17ba172a45e7a08dc99883430e1c2aba17d23e5a2864cd514a62d2391a71806767f05fe66b395dda3e74b75ffa16e80c7814c47657dbc5d652dadba869691bf05fbe306091f3397ec916ad71a4d2b534da7055391aa75efee749f48443370cae430895ac596bdcaafb5a2cbad75e83c7c8454f93177992f9166721331db1e11e48a113a51b3ebc2a79f1d74199127183d7708c47a3ff71663d9d; path=/raframework
+JSESSIONID=NxD1cGypZDSvzgRTPqNhgc6JhW2SLpqtw9qKTfJf3fNGb86cz1LL!-602621212; path=/raframework; HttpOnly
+usrsvr=-2102138882.D94E71BF3E5738294DE4B56266B044CA; expires=Thu, 03-Jan-2019 12:25:02 GMT; path=/raframework
+ORA_EPMWS_session=c52f739b0eefaaa8664c4a461e794b16ef12d8d3960dec31163d9ee9230037835a8f74896422e6c7f1f05a810b77dd44907147cc5ca7da0948ecb9f9b11242d9b0112f59a3ec80e5e831e2490e5f5ead490fbb882ca093650b79fa04fe9276ef8a1ec79a5dd50b07ef0099b62ffa2adcfc2083349a1c17ba172a45e7a08dc99883430e1c2aba17d23e5a2864cd514a62d2391a71806767f05fe66b395dda3e74b75ffa16e80c7814c47657dbc5d652dadba869691bf05fbe306091f3397ec916ad71a4d2b534da7055391aa75efee749f48443370cae430895ac596bdcaafb5a2cbad75e83c7c8454f93177992f9166721331db1e11e48a113a51b3ebc2a79f1d74199127183d7708c47a3ff71663d9d; path=/raframework
+X-ORACLE-DMS-ECID: 00iqgUZMRJT2nJWjLxATOA00015W0032qQ
+X-Powered-By: Servlet/2.5 JSP/2.1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=180, max=58
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+Content-Language: en
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<!--
+		CDS Namespace Definitions.
+		All the namespaces and its classes should be defined here.
+	-->
+	<namespaces>
+		<namespace name="com.hyperion">
+			<namespace name="wsearch">
+				<namespace name="search" basePath="modules" src="Module.jsp"/>
+				<namespace name="advancedSearch" basePath="modules" src="Module.jsp"/>
+				<namespace name="util" load="true">
+					<class name="launchRepositoryDocument" />
+				</namespace>
+			</namespace>
+			<namespace name="tools">
+				<namespace name="cds" src="Cds.js" load="true">
+					<class name="CDSCommand" />
+					<class name="HSRoleVars" />
+					<class name="RefreshEvent" />
+					<namespace name="lang" src="Lang.js" load="true">
+						
+					</namespace>
+					<namespace name="util" src="Util.js" load="true">
+						
+					</namespace>
+					<namespace name="data" src="Data.js" load="true">
+						
+					</namespace>
+					<namespace name="bindows" src="Bindows.js" load="true">
+						
+					</namespace>
+					<namespace name="repository" src="Repository.js" load="true">
+						
+						<namespace name="bpm">
+							<namespace name="filedialog" basePath="modules" src="Dialog.js" />
+							<namespace name="catnav2" basePath="modules" src="Module.js" />
+							<namespace name="listing" basePath="modules" src="Module.js" />
+							<namespace name="explorer" basePath="modules" src="Module.js">
+								<namespace name="showcolumnsdialog" basePath="modules" src="Dialog.js" />
+								<namespace name="displayitemsoftypeotherdialog" basePath="modules" src="Dialog.js" />
+								<namespace name="content" basePath="modules" />
+								<namespace name="emailaction" basePath="modules">
+									<namespace name="selectemail" basePath="modules" src="Dialog.js" />
+								</namespace>
+								<namespace name="folderactions" basePath="modules" src="Module.js" />
+								<namespace name="reportsactions" basePath="modules" src="Module.js" />
+								<namespace name="defaultactions" basePath="modules" src="Module.js" />
+								<namespace name="workspacepageactions" basePath="modules" src="Module.js" />
+								<namespace name="analyzeractions" basePath="modules" src="Module.js" />
+								<!--
+								<namespace name="bqyjobactions" basePath="modules" />
+								<namespace name="sqrjobactions" basePath="modules" />
+								<namespace name="genericjobactions" basePath="modules" />
+								-->
+								<namespace name="jobactions" basePath="modules" />
+								<namespace name="joboutputactions" basePath="modules" />
+								<namespace name="bqyactions" src ="Module.js" basePath="modules" />
+								<namespace name="javascriptactions" src ="Module.js" basePath="modules" />
+							</namespace>
+							<namespace name="prefsdialog" basePath="modules">
+								<namespace name="auth" basePath="modules" src="Module.js" />
+								<namespace name="explorer" basePath="modules" src="Module.js" />
+								<namespace name="production" basePath="modules" src="Module.js" />
+								<namespace name="iserver" basePath="modules" />
+								<namespace name="startupexplorer" basePath="modules" src="Module.js" />
+								<namespace name="startupdocument" basePath="modules" src="Module.js" />
+								<namespace name="startupfavorite" basePath="modules" src="Module.js" />
+							</namespace>
+							<namespace name="favoritesdialog" basePath="modules" src="Dialog.js" />
+							<namespace name="bqyselector" basePath="modules" />
+							<namespace name="objectselector" basePath="modules" />
+							<namespace name="msFiledialog" basePath="modules" src="Dialog.js" />
+						</namespace>
+					</namespace>
+				</namespace>
+			</namespace>
+		</namespace>
+	</namespaces>
+
+	<!--
+		Modules and Dialogs Definitions.
+		All the modules should be defined under the modules directory.
+		The Classes and adf need to reside in the namespace specified for the module.
+	-->
+	<modules>
+		<!-- CDS Mode Container -->
+		<!--
+			 IRServiceCheckInterval param value is in minutes.
+			 Remove IRServiceCheckInterval param to disable recurring intelligence service check.
+		-->
+		<module
+			id="cds.mode"
+			namespace="com.oracle.workspace.mode"
+			adfUri="Adf.jsp"
+			singleton="true"
+			startup=""
+			helpWindow="avalanche"
+			helpIndexUri="launch.html"
+			helpTechSupportUri="http://www.oracle.com/support/index.html"
+			helpNetworkUri="http://www.oracle.com/technology/index.html"
+			helpWeb="http://www.oracle.com/index.html"
+			helpAttributes="width=800,height=600,toolbar=no,location=no,directories=no,status=yes,menubar=yes,scrollbars=yes, copyhistory=yes,resizable=yes"
+			helpUri="wksp_mode.html"
+			helpBasePath="base">
+			<param name="serverName" value="Workspace" />
+			<param name="bpmDesignerInstallerRelativeUri" value="/webstart/startup.jsp" />
+			<param name="jawsScriptInstallerRelativeUri" value="/AccessibilityIRScripts/AccessibilityIRScriptsSetup.exe" />
+			<param name="resizeContentInterval" value="2000" />
+		</module>
+
+		<!-- CDS URL Launcher Module -->
+		<module
+			id="cds.urllauncher"
+			namespace="com.oracle.workspace.urllauncher"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="false"
+			contentImageUri="images/com/hyperion/tools/cds/repository/bpm/CT_ViewerModeListItem.gif"
+			helpUri="cds_urllauncher.html">
+		</module>
+
+		<!-- CDS Listing Content Module -->
+		<module
+			id="cds.listing"
+			namespace="com.hyperion.tools.cds.repository.bpm.listing"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="false"
+			contentImageUri="images/com/hyperion/tools/cds/repository/bpm/CT_ViewerModeListItem.gif"
+			helpUri="cds_listing.html">
+		</module>
+
+		<!-- Rename Dialog -->
+		<module
+			id="cds.renamedialog"
+			namespace="com.hyperion.bpm.web.common"
+			moduleClass="Dialog"
+			handlerClass="SimpleInputDialogHandler"
+			singleton="true"
+			helpUri="cds_explorerrenamedialog.html">
+		</module>
+
+		<!-- New Folder Dialog -->
+		<module
+			id="cds.newfolderdialog"
+			namespace="com.hyperion.bpm.web.common"
+			moduleClass="Dialog"
+			handlerClass="SimpleInputDialogHandler"
+			singleton="true"
+			helpUri="cds_explorernewfolderdialog.html">
+		</module>
+		
+		<!-- Open Url Dialog -->
+		<module
+			id="cds.openurldialog"
+			namespace="com.hyperion.bpm.web.common"
+			moduleClass="Dialog"
+			handlerClass="SimpleInputDialogHandler"
+			singleton="true"
+			helpUri="cds_openurldialog.html">
+		</module>
+
+		<!-- New Url Dialog -->
+		<module
+			id="cds.newurldialog"
+			namespace="com.hyperion.bpm.web.common"
+			moduleClass="Dialog"
+			handlerClass="SimpleInputDialogHandler"
+			singleton="true"
+			helpUri="cds_newurldialog.html">
+		</module>
+
+		<!-- Update Url Dialog -->
+		<module
+			id="cds.updateurldialog"
+			namespace="com.hyperion.bpm.web.common"
+			moduleClass="Dialog"
+			handlerClass="SimpleInputDialogHandler"
+			singleton="true"
+			helpUri="cds_updateurldialog.html">
+		</module>
+
+		<!-- CDS File Dialog -->
+		<module
+			id="cds.filedialog"
+			namespace="com.hyperion.tools.cds.repository.bpm.filedialog"
+			moduleClass="com.hyperion.bpm.web.common.Dialog"
+			handlerClass="Handler"
+			singleton="true"
+			helpUri="cds_filedialog.html">
+			<param name="saveAsHelpUri" value="save_as_dialog.html" />
+		</module>
+		<module
+			id="cds.msFiledialog"
+			namespace="com.hyperion.tools.cds.repository.bpm.msFiledialog"
+			moduleClass="com.hyperion.bpm.web.common.Dialog"
+			handlerClass="Handler"
+			singleton="false"
+			helpUri="import_ms_reports.html">
+		</module>
+
+		<!-- CatNav2 Dialog -->
+		<module
+			id="cds.catnav2"
+			namespace="com.hyperion.tools.cds.repository.bpm.catnav2"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			helpUri="cds_filedialog.html"
+			singleton="true">
+		</module>
+
+		<!-- CDS Explorer Show Columns Dialog -->
+		<module
+			id="cds.explorershowcolumnsdialog"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.showcolumnsdialog"
+			moduleClass="com.hyperion.bpm.web.common.Dialog"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true"
+			helpUri="cds_explorershowcolumnsdialog.html">
+		</module>
+
+		<!-- CDS Explorer Display Items Of Type Dialog -->
+		<module
+			id="cds.explorerdisplayitemsoftypeotherdialog"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.displayitemsoftypeotherdialog"
+			moduleClass="com.hyperion.bpm.web.common.Dialog"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true"
+			helpUri="cds_explorerdisplayitemsoftypeotherdialog.html">
+		</module>
+
+		<!-- CDS Explorer Module -->
+		<module
+			id="cds.explorer"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer"
+			moduleClass="Module"
+			handlerClass="Handler"
+			singleton="true"
+			contentImageUri="images/com/hyperion/tools/cds/repository/bpm/CT_OpenFolder.gif"
+			helpUri="cds_explorer.html"
+			role="EXPLORER">
+			<param name="serverName" value="Workspace" />
+		</module>
+
+		<!-- CDS Explorer Email Action Dialog -->
+		<module
+			id="cds.exploreremailaction"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.emailaction"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true"
+			helpUri="cds_email_links.html">
+		</module>
+
+		<!-- CDS Explorer Select Email Dialog -->
+		<module
+			id="cds.explorerselectemail"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.emailaction.selectemail"
+			moduleClass="com.hyperion.bpm.web.common.Dialog"
+			handlerClass="Handler"
+			singleton="true"
+			helpUri="cds_explorerselectemail.html">
+		</module>
+
+		<!-- CDS Preferences Dialog -->
+		<module
+			id="cds.prefsdialog.auth"
+			namespace="com.hyperion.tools.cds.repository.bpm.prefsdialog.auth"
+			moduleClass="com.hyperion.tools.cds.repository.bpm.prefsdialog.auth.Module"
+			handlerClass="Handler"
+			singleton="true"
+			helpUri="cds_prefsdialog_auth.html">
+		</module>
+		<module
+			id="cds.prefsdialog.explorer"
+			namespace="com.hyperion.tools.cds.repository.bpm.prefsdialog.explorer"
+			moduleClass="com.hyperion.tools.cds.repository.bpm.prefsdialog.explorer.Module"
+			handlerClass="Handler"
+			singleton="true"
+			helpUri="cds_prefsdialog_explorer.html">
+		</module>
+		<module
+			id="cds.prefsdialog.production"
+			namespace="com.hyperion.tools.cds.repository.bpm.prefsdialog.production"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="true"
+			helpUri="raf_prefsdialog_production.html">
+		</module>
+		<module
+			id="cds.prefsdialog.iserver"
+			namespace="com.hyperion.tools.cds.repository.bpm.prefsdialog.iserver"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true"
+			helpUri="raf_prefsdialog_iserver.html">
+		</module>
+		<module
+			id="cds.startupexplorer"
+			namespace="com.hyperion.tools.cds.repository.bpm.prefsdialog.startupexplorer"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="true">
+		</module>
+		<module
+			id="cds.startupdocument"
+			namespace="com.hyperion.tools.cds.repository.bpm.prefsdialog.startupdocument"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="true">
+		</module>
+		<module
+			id="cds.startupfavorite"
+			namespace="com.hyperion.tools.cds.repository.bpm.prefsdialog.startupfavorite"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="true">
+		</module>
+
+		<!-- CDS Favorites Dialog -->
+		<module
+			id="cds.favoritesdialog"
+			namespace="com.hyperion.tools.cds.repository.bpm.favoritesdialog"
+			moduleClass="com.hyperion.bpm.web.common.Dialog"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true"
+			helpUri="cds_favoritesdialog.html">
+		</module>
+
+		<!-- CDS Newdoc Wizard -->
+		<module
+			id="cds.newdoc"
+			namespace="com.oracle.workspace.newdoc"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="false"
+			helpUri="raf_newdoc.html">
+		</module>
+		<module
+			id="cds.objectselector"
+			namespace="com.hyperion.tools.cds.repository.bpm.objectselector"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="false"
+			helpUri="raf_newdoc.html">
+		</module>
+		<module
+			id="cds.bqyselector"
+			namespace="com.hyperion.tools.cds.repository.bpm.bqyselector"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="false"
+			helpUri="cds_newdocStep2.html">
+		</module>
+
+		<!-- About Dialog -->
+		<!-- There is no helpUri because About dialog does not have a help button. -->
+		<module
+			id="cds.abtdialog"
+			namespace="com.oracle.workspace.abtdialog"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true">
+		</module>
+
+		<!-- Action Modules -->
+		<module
+			id="cds.folderactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.folderactions"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="true">
+		</module>
+		<module
+			id="cds.defaultactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.defaultactions"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			singleton="true">
+		</module>
+<!--
+		<module
+			id="cds.bqyjobactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.bqyjobactions"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true">
+		</module>
+		<module
+			id="cds.genericjobactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.genericjobactions"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true">
+		</module>
+-->
+		<module
+			id="cds.joboutputactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.joboutputactions"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true">
+		</module>
+<!--
+		<module
+			id="cds.genjobactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.genjobactions"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true">
+		</module>
+		<module
+			id="cds.sqrjobactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.sqrjobactions"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true">
+		</module>
+-->
+		<module
+			id="cds.jobactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.jobactions"
+			adfUri="Adf.jsp"
+			handlerClass="Handler"
+			modelClass="Model"
+			singleton="true">
+		</module>
+		<module
+			id="cds.reportsactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.reportsactions"
+			handlerClass="HRActionsHandler"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			singleton="true">
+		</module>
+		<module
+			id="cds.analyzeractions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.analyzeractions"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			singleton="true">
+		</module>
+		<module
+			id="cds.bqyactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.bqyactions"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			singleton="true">
+		</module>
+		<module
+			id="cds.javascriptactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.javascriptactions"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			singleton="true">
+		</module>
+		<module
+			id="cds.workspacepageactions"
+			namespace="com.hyperion.tools.cds.repository.bpm.explorer.workspacepageactions"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			singleton="true">
+		</module>
+
+		<!-- Search -->
+		<module
+			id="cds.search"
+			namespace="com.hyperion.wsearch.search"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			modelClass="Model"
+			helpIndexUri="launch_search_services.html"
+			helpUri="search_results.html"
+			
+			singleton="true" />
+		<module
+			id="cds.advancedSearch"
+			namespace="com.hyperion.wsearch.advancedSearch"
+			moduleClass="com.hyperion.bpm.web.common.Module"
+			handlerClass="Handler"
+			modelClass="Model"
+			helpIndexUri="launch_search_services.html"
+			helpUri="advanced_search.html"
+			singleton="true" />
+
+	</modules>
+	
+	<!-- User Preferences -->
+	<defaultprefs>{&quot;com.hyperion.cds.prefs.iserver.dates&quot;:[&quot;yy/mm/dd&quot;,&quot;yyyy mm dd&quot;,&quot;yy/mm/dd &#19979;&#21320; HH:MM:SS&quot;,&quot;mm &#26376;&quot;,&quot;yyyy/mm/dd&quot;,&quot;yy-mm-dd&quot;,&quot;yyyy&#24180;mm&#26376;dd&#26085;&quot;,&quot;yy/mm/dd HH:MM&quot;],&quot;com.hyperion.cds.prefs.iserver.selectedReal&quot;:&quot;#,##0.#####&quot;,&quot;com.hyperion.cds.prefs.iserver.selectedNull&quot;:&quot;EMPTY&quot;,&quot;com.hyperion.reporting.HRPrefs.queryreadymode&quot;:&quot;SmartView&quot;,&quot;com.hyperion.bpm.mruitem&quot;:[&quot;PLANNING_LWA_JSTI:application&quot;,&quot;HFM:JSTIHFM:application&quot;,&quot;HFM:JSTIHFMXJ:application&quot;,&quot;HFM:JSTIHFMZY:application&quot;,&quot;HFM:JSTIHFMRP:application&quot;,&quot;HFM:JSTIHFMXQ:application&quot;,&quot;HFM:JSTIHFMDJ:application&quot;,&quot;HFM:JSTIHFM5:application&quot;,&quot;HFM:TESTHFM:application&quot;,&quot;PLANNING_LWA_JSTI1:application&quot;],&quot;com.hyperion.tools.cds.repository.bpm.explorer.columnWidths&quot;:&quot;200,100,115,115,115,20,20,20,400,50&quot;,&quot;com.hyperion.cds.prefs.iserver.reals&quot;:[&quot;#,##0&quot;,&quot;#,##0.0&quot;,&quot;#,##0.00&quot;,&quot;###0&quot;,&quot;+#,##0&quot;,&quot;#,##0.#####&quot;],&quot;com.hyperion.cds.prefs.production.scanSelected&quot;:&quot;false&quot;,&quot;com.hyperion.tools.cds.repository.bpm.filedialog.Open.columnWidths&quot;:&quot;278,100,100,115,115,20,20,20,400,50&quot;,&quot;com.hyperion.cds.prefs.iserver.times&quot;:[&quot;&#19979;&#21320; HH:MM:SS&quot;,&quot;HH:MM:SS&quot;,&quot;HH:MM&quot;],&quot;com.hyperion.cds.prefs.production.folders&quot;:[],&quot;com.hyperion.cds.prefs.pt.isshown&quot;:&quot;false&quot;,&quot;com.hyperion.cds.prefs.iserver.selectedDate&quot;:&quot;yy/mm/dd&quot;,&quot;com.hyperion.reporting.HRPrefs.glspacing&quot;:&quot;360&quot;,&quot;com.hyperion.reporting.HRPrefs.query_ready_new_workbook&quot;:&quot;0&quot;,&quot;com.hyperion.reporting.HRPrefs.merge_equal_prompts&quot;:&quot;1&quot;,&quot;com.hyperion.reporting.HRPrefs.query_ready_new_worksheet&quot;:&quot;1&quot;,&quot;com.hyperion.tools.cds.repository.bpm.explorer.defaultactions.application/x-brioquery&quot;:&quot;HTML&quot;,&quot;com.hyperion.cds.prefs.iserver.selectedMonth&quot;:&quot;mm &#26376;&quot;,&quot;com.hyperion.reporting.HRPrefs.glcolor&quot;:&quot;0&quot;,&quot;com.hyperion.reporting.HRPrefs.glsnap&quot;:&quot;True&quot;,&quot;com.hyperion.cds.prefs.production.folderuuids&quot;:[],&quot;com.hyperion.reporting.HRPrefs.glstyle&quot;:&quot;Line&quot;,&quot;com.hyperion.cds.prefs.iserver.selectedTime&quot;:&quot;&#19979;&#21320; HH:MM:SS&quot;,&quot;com.hyperion.cds.prefs.iserver.selectedLocale&quot;:&quot;CN&quot;,&quot;com.hyperion.cds.prefs.iserver.selectedInteger&quot;:&quot;###0&quot;,&quot;com.hyperion.reporting.HRPrefs.previewuserpov&quot;:&quot;2&quot;,&quot;com.hyperion.reporting.HRPrefs.Units&quot;:&quot;Inches&quot;,&quot;com.hyperion.tools.cds.repository.bpm.mode.DefaultNewFolder&quot;:&quot;REPORTMART&quot;,&quot;com.hyperion.tools.cds.repository.bpm.mode.DefaultExplorerFolder&quot;:&quot;REPORTMART&quot;,&quot;com.hyperion.cds.prefs.iserver.selectedTimeStamp&quot;:&quot;yy/mm/dd &#19979;&#21320; HH:MM:SS&quot;,&quot;com.hyperion.tools.cds.repository.bpm.filedialog.Select&quot;:&quot;0ad7225c-0000-040a-000000efd485b810&quot;}</defaultprefs>
+	<customheaders> 
+		
+		<customheader name="X-ORACLE-BPMUI-CSRF"  value="F3EE92C464D3BB8166C9D97259E80D5DE2DAAF62360A36BD0AE0AE289AFDAA25BB0FDDD7F34A0AB4911139E5824E1BBF12E86FD7C72AC4F5053234BB1F9130CE" /> 
+		
+	</customheaders>
+</config>
+
+=====没用
+
+http://192.168.60.125:19000/HyperionPlanning/Images/CT_HPApps.gif
+
+GET /HyperionPlanning/Images/CT_HPApps.gif HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: */*
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/workspace/index.jsp?framed=true
+DNT: 1
+Connection: keep-alive
+Cookie: ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros
+
+
+
+HTTP/1.1 200 OK
+Date: Tue, 04 Dec 2018 12:25:03 GMT
+Server: Oracle-Application-Server-11g
+Cache-Control: public,max-age=2592000, max-age=7257600
+Accept-Ranges: bytes
+Content-Length: 959
+Last-Modified: Wed, 04 Feb 2015 17:52:10 GMT
+X-ORACLE-DMS-ECID: 00iqgUZQEkq2nJWjLxATOA00015W0032rB
+X-Powered-By: Servlet/2.5 JSP/2.1
+Expires: Tue, 26 Feb 2019 12:25:03 GMT
+Keep-Alive: timeout=180, max=71
+Connection: Keep-Alive
+Content-Type: image/gif
+Content-Language: en
+
+data:image/gif;base64,R0lGODlhEAAQAPcAAAAAAP///8ndz568kZO1gmJtXXSHanCBZ2h2V4qoWnOGVXuRV5KtYJy1Z6q8cbnMfbbHesXVhcnYiKOYUsmobKNhAq50IatoC795GdiNK9uQLsF7J9GIK8R+KK98O25aSt53MZtfN9xyLOBoMt1iLeFnNORsOO+JYPKNZat6ZtNPHMZKGtZSILpOJfJ7UehrQPmDX/yGY3l5eWdnZ////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAADQALAAAAAAQABAAAAicAGkIHDhQgkGCCAUaXHgwoUAHECJIeNAggcOHDhxUTGDxYkYHDDh2TBgDBQWQIknGWBnjxISUCE24iAHjBQsPCRYgmIFwxIgSLFSo8KDAAAEaMgiCGEFCqIoQRo8mpaGhagYRTj8Q2Iq0AwerGCo4PUBggICkGzZ0CFtBrIoVBQQgRZv2QluxLWTonUoj7Qa7bVPovfjXgsDBCQMCADs=
+
+
+
+
+===============================获取Planning session的 URL:
+
+http://192.168.60.125:19000/HyperionPlanning/modules/com/hyperion/planning/Adf.jsp
+POST /HyperionPlanning/modules/com/hyperion/planning/Adf.jsp HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: */*
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/workspace/index.jsp?framed=true
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 1321
+DNT: 1
+Connection: keep-alive
+Cookie: ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros; ORA_EPMWS_timeZone=-480
+
+
+mru_id=PLANNING_LWA_JSTI:application
+sourceApp=JSTI
+cluster=PLANNING_LWA
+bpm.contentwidth=1144
+bpm.contentheight=528
+bpm.objectpaletteheight=555
+bpm.objectpalettewidth=207
+repository_token=c52f739b0eefaaa8664c4a461e794b16ef12d8d3960dec31163d9ee9230037835a8f74896422e6c7f1f05a810b77dd44907147cc5ca7da0948ecb9f9b11242d9b0112f59a3ec80e5e831e2490e5f5ead490fbb882ca093650b79fa04fe9276ef8a1ec79a5dd50b07ef0099b62ffa2adcfc2083349a1c17ba172a45e7a08dc99883430e1c2aba17d23e5a2864cd514a62d2391a71806767f05fe66b395dda3e74b75ffa16e80c7814c47657dbc5d652dadba869691bf05fbe306091f3397ec916ad71a4d2b534da7055391aa75efee749f48443370cae430895ac596bdcaafb5a2cbad75e83c7c8454f93177992f9166721331db1e11e48a113a51b3ebc2a79f1d74199127183d7708c47a3ff71663d9d
+instance=7
+LOCALE_LANGUAGE=en_US
+rightToLeft=false
+accessibilityMode=false
+themeSelection=Skyros
+sso_token=iu5vzkbSczqmBcC/dCVUXAp7jFN+xEtiE0/PaIEfnqt1l2DnD6suwRbIkjSW4KMy/WGpE/y20c8EWHGL3okELANJofAsfsG9N+U5plQtYCfPi59Y397Zmm2J8U5rNGl+dAMtBVHPfnY7xVR7VCwo/UvUqQ+7+ywIytHFjhEeanxY7D92ZEu06ALJv/vE38fiyYQkTB4rOvN9gQJoInVR16J7KRinetemGsulXisFVaAJBWS0dp20K8p9gTurWsRkOevHQT/INDXvaO9CTgJFefacRCOa3WUhQAKUrJskltTfWir6/h8RrJCtXiJercRet38BTwH77VS6rK8uHucxec1PPQzIej/uPKu84cRz5VTiF9KAefv3mSocdlr7p7ZT5O2zy5znUj0RGPlgIMJmwKbXGHybDwDvDz0zG7K0vqkIpO/cCY8FQ6oHbuoK9aVP
+
+
+
+
+
+
+
+
+HTTP/1.1 200 OK
+Date: Tue, 04 Dec 2018 12:31:45 GMT
+Server: Oracle-Application-Server-11g
+Set-Cookie: JSESSIONID=g3J5cGzRH78ThySFvkTTJksdtnh5y0KR4PcXhZ6shXPXfSgb132J!-602621212; path=/HyperionPlanning; HttpOnly
+X-ORACLE-DMS-ECID: 00iqgUvMSQ22nJWjLxATOA00015W003309
+X-Powered-By: Servlet/2.5 JSP/2.1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=180, max=95
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+Content-Language: en
+
+
+==================================获得_afrLoop，在body里边   query = _addParam(query, "_afrLoop", "705904389616455");：
+http://192.168.60.125:19000/HyperionPlanning/faces/PlanningCentral?Application=JSTI
+GET /HyperionPlanning/faces/PlanningCentral?Application=JSTI HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/HyperionPlanning/LaunchPlanningCentral.jsp?Application=JSTI&useADF=true
+DNT: 1
+Connection: keep-alive
+Cookie: ORA_HP_MRUApplication=JSTI; ORA_HP_MRUUsername=admin; JSESSIONID=pLPlcGBTyRYlJF3hBTknBGmvqv1wDc5p0spTVTJlrTDp1lpF8Xb9!-602621212; ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros; ORA_EPMWS_timeZone=-480
+Upgrade-Insecure-Requests: 1
+
+Application=JSTI
+
+
+
+HTTP/1.1 200 OK
+Date: Tue, 04 Dec 2018 13:30:23 GMT
+Server: Oracle-Application-Server-11g
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-ORACLE-DMS-ECID: 00iqgYD3LAN2nJWjLxATOA00015W0033a7
+X-Powered-By: Servlet/2.5 JSP/2.1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=180, max=66
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html;charset=utf-8
+Content-Language: en
+
+
+
+<html lang="en-US"><head><script>
+/*
+** Copyright (c) 2008, Oracle and/or its affiliates. All rights reserved.
+*/
+
+/**
+ * This is the loopback script to process the url before the real page loads. It introduces
+ * a separate round trip. During this first roundtrip, we currently do two things: 
+ * - check the url hash portion, this is for the PPR Navigation. 
+ * - do the new window detection
+ * the above two are both controled by parameters in web.xml
+ * 
+ * Since it's very lightweight, so the network latency is the only impact. 
+ * 
+ * here are the list of will-pass-in parameters (these will replace the param in this whole
+ * pattern: 
+ *        viewIdLength                           view Id length (characters), 
+ *        loopbackIdParam                        loopback Id param name, 
+ *        loopbackId                             loopback Id,
+ *        windowModeIdParam                      window mode param name, 
+ *        clientWindowIdParam                    client window Id param name,
+ *        windowId                               window Id, 
+ *        initPageLaunch                         initPageLaunch, 
+ *        enableNewWindowDetect                  whether we want to enable new window detection
+ *        jsessionId                             session Id that needs to be appended to the redirect URL
+ *        adfHashMarker                          A string udentifying the start of PPR Navigation hash
+ *        enablePPRNav                           whether we want to enable PPR Navigation
+ *        internalParamsObj                      an object whose keys are the names of the internal parameters and whose values evaluate as true
+ *        noLoopbackViewId                       View Id used where the page should be redirected when the session cannot be established due to the 
+ *                                               browser with disabled cookies accessing a server with URL rewriting disabled 
+ */
+ 
+ 
+function _addParam(queryString, paramName, value)
+{
+  var hasValue = (value != null && value !== '');
+    
+  if (hasValue)
+  { 
+    if (queryString == null || queryString ==='')
+    {
+      queryString = "?";
+    }
+    else
+    {
+      queryString += "&";
+    }
+    queryString = queryString + paramName + '=' + value; 
+  }
+  return queryString;
+}
+
+function _cookiesEnabled()
+{
+  return (navigator && navigator.cookieEnabled);
+}
+
+var internalParams = {'_afrLoop':1,'_afrWindowMode':1,'_afrWindowId':1,'_afrRedirect':1};
+var queryParamNames = [];
+var queryParamValues = [];
+
+
+function _addQS(pname, pvalue)
+{
+  if (!internalParams[pname])
+  {
+    queryParamNames.push(pname);
+    queryParamValues.push(pvalue)
+  }    
+}
+
+function _replaceCallback (p0, pname, p2, pvalue) 
+{ 
+  _addQS(pname, pvalue);
+} 
+
+
+var id = null; 
+var query = null;
+var anchor = null;
+var href = document.location.href; 
+var hashIndex = href.indexOf("#"); 
+var hash = (hashIndex > 0) ? href.substring(hashIndex + 1) : null;
+href = (hashIndex > 0) ? href.substring(0, hashIndex) : href;
+var oldUri = href;
+
+var marker = '!';
+
+/* process the hash part of the url, split the url */
+if (hashIndex > 0) 
+{
+  if (hash.indexOf(marker) == 0)
+  {
+    var adfHash = decodeURIComponent(hash.substring(marker.length)); 
+ 
+    var state = adfHash.split("@"); 
+    var len = state.length;
+    
+    if (len >= 2)
+    {
+      id = state[1];
+    }
+    if (len >= 3)
+    {
+      query = state[2];
+    }
+    if (len >= 4)
+    {
+      anchor = state[3];
+    }
+  }
+  else
+  {
+    anchor = decodeURIComponent(hash);
+    // Check for legacy PPR navigation Hash format
+    if (false && (anchor.indexOf('/') >= 0 || anchor.indexOf('@') >= 0))
+    {
+      var astate = anchor.split("@"); 
+      var alen = astate.length;
+      if (alen >= 1)
+      {
+        id = astate[0];
+      }
+      if (alen >= 2)
+      {
+        query = astate[1];
+      }
+      anchor = null;
+    }
+  }
+}
+
+
+
+/* process the query part */
+var queryIndex = href.indexOf("?"); 
+if (queryIndex > 0) 
+{
+  // only when pprNav is on, we take in the query from the hash portion
+  query = (query || (id && id.length>0))? query: href.substring(queryIndex); 
+  href = href.substring(0, queryIndex); 
+} 
+
+if (query != null && query.length > 0)
+{
+  // extract all query parameters
+  query.replace(/([^?=&]+)(=([^&]*))?/g, _replaceCallback);
+  
+  query = null;
+  if (queryParamNames.length > 0)
+  {
+    query = '';
+    
+    for (var i = 0; i < queryParamNames.length; i++)
+    {
+      var n = queryParamNames[i];
+      var v = queryParamValues[i];
+      query = query +  ((i == 0) ? '?' : '&')  + n +  '=' + ((v == null) ? '' : v); 
+    }
+  }
+}
+
+var jsessionIndex = href.indexOf(';');
+if (jsessionIndex > 0)
+{
+  href = href.substring(0, jsessionIndex);
+}
+
+
+// Check whether HTTP session can be established by verifying that cookies are enabled or URL rewriting is on. 
+// If not, abort processing and redirect to an error page
+if (!'' && !_cookiesEnabled())
+{
+  window.location.replace(href.substring(0, href.length - 16) + '/_noloopbackerror_');
+}
+else
+{
+  /* we will replace the viewId only when pprNav is turned on */
+  if (false) 
+  {
+    if (id != null && id.length > 0) 
+    { 
+      href = href.substring(0, href.length - 16) + id;
+    } 
+  }
+  
+  query = _addParam(query, "_afrLoop", "705904389616455");
+  
+  /* below is the new window detection logic */
+  var initWindowName = "_afr_init_"; // temporary window name set to a new window
+  var windowName = window.name;
+  
+  // if the window name is "_afr_init_", treat it as redirect case of a new window
+  if ((true) && (!windowName || windowName==initWindowName || 
+      windowName!="null"))  
+  { 
+    /* append the _afrWindowMode param */
+    var windowMode;
+    if (true) 
+    {
+      /* this is the initial page launch case, 
+         also this could be that we couldn't detect the real windowId from the server side */
+      windowMode=0;
+    }
+    else if ((href.indexOf("/__ADFvDlg__") > 0) || (query.indexOf("__ADFvDlg__") >= 0))
+    {
+      /* this is the dialog case */
+      windowMode=1;
+    }
+    else 
+    {
+      /* this is the ctrl-N case */
+      windowMode=2;
+    }
+    
+    query = _addParam(query, "_afrWindowMode", windowMode);
+  
+    /* append the _afrWindowId param */
+    var clientWindowId;
+    /* in case we couldn't detect the windowId from the server side */
+    if (!windowName || windowName == initWindowName) 
+    {
+      clientWindowId = "null";
+      
+      // set window name to an initial name so we can figure out whether a page is loaded from
+      // cache when doing Ctrl+N with IE
+      window.name = initWindowName;
+    }
+    else 
+    {
+      clientWindowId = windowName;
+    }  
+    
+    query = _addParam(query, "_afrWindowId", clientWindowId);
+    
+  }
+  
+  var sess = "";
+  
+  if (sess)
+  {
+    /* here we check the jsessionId, if we ask the container to send jsessionId as */
+    /* a parameter then it will look like "?jsessionid=xxx". */
+    if (sess.indexOf(";")==0)
+    {
+      href += sess;
+    }
+    else if (sess.indexOf("?") == 0)
+    {
+      /* at this time query should already be non-empty */
+      query += "&" + sess.substr(1);
+    }
+  }
+  
+  var newHref = href + ((query == null) ? '' : query);
+
+  var newHash = (anchor != null && anchor.length > 0) ? encodeURIComponent(anchor) : null;
+
+  var loc = window.location;
+
+
+  // Workaround for the Firebug bug, where the cached version of the loopback script is served
+  var isOldFirebug = false;
+
+  if (window.console != null && window.console.firebug != null)
+  {
+    var ver = parseFloat(window.console.firebug);
+    isOldFirebug = !isNaN(ver) && ver < 1.9;
+  }
+
+  // Browser won't reload the page if the base URL is the same, and the new URL has hash
+  if (newHref == oldUri && (newHash != null || isOldFirebug))
+  {
+    if (hash != newHash)
+    {
+      loc.replace(newHash == null ? "#" + marker : '#' + newHash);
+    }
+    loc.reload(true);
+  }
+  else 
+  {
+    loc.replace(newHash == null ? newHref : newHref + '#' + newHash);
+  }
+}
+</script><noscript>This page uses JavaScript and requires a JavaScript enabled browser.Your browser is not JavaScript enabled.</noscript></head></html>
+
+
+=================================获得ctrl-state：
+
+
+http://192.168.60.125:19000/HyperionPlanning/faces/PlanningCentral?Application=JSTI&_afrLoop=705904389616455&_afrWindowMode=0&_afrWindowId=LPCentral
+GET /HyperionPlanning/faces/PlanningCentral?Application=JSTI&_afrLoop=705904389616455&_afrWindowMode=0&_afrWindowId=LPCentral HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/HyperionPlanning/faces/PlanningCentral?Application=JSTI
+DNT: 1
+Connection: keep-alive
+Cookie: ORA_HP_MRUApplication=JSTI; ORA_HP_MRUUsername=admin; JSESSIONID=pLPlcGBTyRYlJF3hBTknBGmvqv1wDc5p0spTVTJlrTDp1lpF8Xb9!-602621212; ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros; ORA_EPMWS_timeZone=-480
+Upgrade-Insecure-Requests: 1
+
+
+
+HTTP/1.1 302 Moved Temporarily
+Date: Tue, 04 Dec 2018 13:30:23 GMT
+Server: Oracle-Application-Server-11g
+Location: /HyperionPlanning/faces/PlanningCentral?_afrLoop=705904734496869&_afrWindowMode=0&Application=JSTI&_adf.ctrl-state=xf06o7muc_4
+X-ORACLE-DMS-ECID: 00iqgYD4cHH2nJWjLxATOA00015W0033a8
+X-Powered-By: Servlet/2.5 JSP/2.1, JSF/1.2
+Keep-Alive: timeout=180, max=65
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/plain
+Content-Language: en
+
+
+

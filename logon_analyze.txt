@@ -1,0 +1,45 @@
+request header:
+
+POST /workspace/logon HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: */*
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/workspace/index.jsp?framed=true
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Content-Length: 117
+Connection: keep-alive
+Cookie: JSESSIONID=vx3ScG2W6610GxGqpK0hnsYCP8fvBhjYCBT4QCMB1kjvWMFX12hL!-602621212; ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros; ORA_EPMWS_timeZone=-480
+
+
+response header and body:
+
+HTTP/1.1 200 OK
+Date: Tue, 04 Dec 2018 11:53:13 GMT
+Server: Oracle-Application-Server-11g
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+X-Content-Type-Options: nosniff
+X-ORACLE-BPMUI-CSRF: F480765A50054A718427A038105888278BDE7D180E34E76CE7E097E46CEEBE50FBE917516DEC5880197EF08C0FFF660F6711AB2191410F151E344E331A7B98C9
+X-ORACLE-DMS-ECID: 00iqgSlXyUf2nJWjLxATOA00015W0032dv
+X-Powered-By: Servlet/2.5 JSP/2.1
+X-SSO-Login-Status: 1
+Set-Cookie: JSESSIONID=xsMscGqJyq1w18Zdp34LTzJbTf01MH2bLypS8TRhdpYPhXYvqNh5!-602621212; path=/workspace; HttpOnly
+ORA_EPMWS_User=admin; expires=Thu, 03-Jan-2019 11:53:13 GMT; path=/
+ORA_EPMWS_Locale=en_US; expires=Wed, 04-Dec-2019 11:53:13 GMT; path=/
+ORA_EPMWS_AccessibilityMode=false; expires=Wed, 04-Dec-2019 11:53:13 GMT; path=/
+ORA_EPMWS_ThemeSelection=Skyros; expires=Wed, 04-Dec-2019 11:53:13 GMT; path=/
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=180, max=93
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+Content-Language: en
+
+
+<?xml version="1.0" encoding="UTF-8"?><BpmResponse type="success"><token><![CDATA[Uq2UqxRPantCsqw0+qjX5T4Cj/aykQVAbxIYgcAf54sIvH8BP23oH7uLE5L7WHH+7SNZ244oJoinABv6fMJJ4To2SPdQs+jN8huU2YlSAw1FIMHZg5JuDkj8tVQZF59hgMduS1fUg6ewA2j4ri00lKvsfqSCVd9ckXqK812Slud+K2aa5ydyQ6fs1ETaZPs1IwzqIqnQUJ9DaAUxaQIj3vNBHshyFckyeurBVlzFK2kIAR9rAZ+823wWpAJSQcguGjKydMGoACFdr/fe8E3XNLufejGLZEeofNRJQMuCIaYZRXWNmt6I/Q+qzbpIXL6/R1ELYIbZj+ESgGoZUP3kChX4ZJgg5MGYYKRLriozSsDU70hKFPHLwT1PPjC4xAG+bf07pDJNL2U9LaI/BsxjNori5R/1TcIRiNBEkxkC2hNxOGUkLx4YNCSR8lKKuG0e]]></token><user><![CDATA[admin]]></user><assertertoken><![CDATA[h%2BCQuoAdYqQjJ%2BEtn5fFkeAbi%2F8KStgg59oeuTNiPGGPgNI%2BCETXrAgylpL%2F2I5T]]></assertertoken></BpmResponse>
+
+

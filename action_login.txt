@@ -1,0 +1,71 @@
+Action_login()
+{
+
+	web_add_cookie("ORA_EPMWS_User=admin; DOMAIN=192.168.60.125");
+
+	web_add_cookie("ORA_EPMWS_Locale=zh_CN; DOMAIN=192.168.60.125");
+
+	web_add_cookie("ORA_EPMWS_AccessibilityMode=false; DOMAIN=192.168.60.125");
+
+	web_add_cookie("ORA_EPMWS_ThemeSelection=Skyros; DOMAIN=192.168.60.125");
+	
+	web_add_header("Cookie","usrsvr=-2102138882.D94E71BF3E5738294DE4B56266B044CA; ORA_EPMWS_session=c52f739b0eefaaa8664c4a461e794b16ef12d8d3960dec31163d9ee9230037835a8f74896422e6c7f1f05a810b77dd44907147cc5ca7da0948ecb9f9b11242d93828b2c83713e62b21dc573639b3cf9c067d5b2e3b6f8e714370816cd04c760ddf5f7a211e4bd5eee1105e61ad22e32a4bb28546ac0e9afffd030bba9c32a1ff83430e1c2aba17d23e5a2864cd514a62d2391a71806767f05fe66b395dda3e74b75ffa16e80c7814c47657dbc5d652dadba869691bf05fbe306091f3397ec916ad71a4d2b534da7055391aa75efee749f48443370cae430895ac596bdcaafb5a2cbad75e83c7c8454f93177992f9166721331db1e11e48a113a51b3ebc2a79f1d74199127183d7708c47a3ff71663d9d; JSESSIONID=wZDBcGMXYhnXV01NtgT624H6hV24nLMK9SsZTrbwlhphTLJRPvH2!-602621212; ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros; ORA_EPMWS_timeZone=-480");
+	
+	web_reg_save_param("RP_TOKEN_NO_ENCODING","LB=CDATA[","RB=]]></token>", LAST);
+
+
+	
+/*Correlation comment - Do not change!  Original value='0A5B4D5E9BFC5ABF43A2B45B7E38B3BAEE778FE9B7ED731E227F4679A04CB1B520C29B009DC1B9339535E2679C0756604D2262D327B2D9BA1BD28EB2CF3B5CF1' Name ='X-ORACLE-BPMUI-CSRF' Type ='ResponseBased'*/
+	web_reg_save_param_regexp(
+		"ParamName=X-ORACLE-BPMUI-CSRF",
+		"RegExp=X-ORACLE-BPMUI-CSRF:\\ (.*?)\\\r\\\n",
+		SEARCH_FILTERS,
+		"Scope=Headers",
+		"IgnoreRedirections=No",
+		LAST);	
+		
+	web_reg_save_param_regexp(
+		"ParamName=X-ORACLE-DMS-ECID",
+		"RegExp=X-ORACLE-DMS-ECID:\\ (.*?)\\\r\\\n",
+		SEARCH_FILTERS,
+		"Scope=Headers",
+		"IgnoreRedirections=No",
+		LAST);
+
+	web_reg_save_param_regexp(
+		"ParamName=X-SSO-Token",
+		"RegExp=X-SSO-Token:\\ (.*?)\\\r\\\n",
+		SEARCH_FILTERS,
+		"Scope=Headers",
+		"IgnoreRedirections=No",
+		LAST);
+
+	web_reg_save_param_ex("ParamName=c_dtCookie",
+		"LB=JSESSIONID=",
+		"RB=.cguschd2728vm",
+		SEARCH_FILTERS,
+		"Scope=All",
+		LAST);
+
+	
+	web_custom_request("logon", 
+		"URL=http://192.168.60.125:19000/workspace/logon", 
+		"Method=POST", 
+		"Resource=0", 
+		"RecContentType=text/xml", 
+		"Referer=http://192.168.60.125:19000/workspace/index.jsp?framed=true", 
+		"Snapshot=t47.inf", 
+		"Mode=HTML", 
+		"EncType=application/x-www-form-urlencoded;charset=UTF-8", 
+		"Body=sso_username=admin&sso_password=Passw0rd&LOCALE_LANGUAGE=%20&rightToLeft=%20&accessibilityMode=%20&themeSelection=%20", 
+		LAST);
+
+
+	web_add_header("Cookie","JSESSIONID={c_dtCookie}");
+
+	web_add_cookie("X-ORACLE-DMS-ECID: {X-ORACLE-DMS-ECID}; DOMAIN=192.168.60.125");
+	web_add_cookie("X-ORACLE-BPMUI-CSRF: {X-ORACLE-BPMUI-CSRF}; DOMAIN=192.168.60.125");
+	web_add_cookie("X-ORACLE-BPMUI-CSRF: {X-ORACLE-BPMUI-CSRF}; DOMAIN=192.168.60.125");
+	
+	return 0;
+}

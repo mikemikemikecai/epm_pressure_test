@@ -1,0 +1,17 @@
+*.~*
+*.~sql
+!*.c
+!*.h
+!*.cpp
+!*.sh
+!*.xml
+!*.py
+!*.md
+!*.jar
+!.scala
+!.java
+!*.sql
+*.doc
+*.docx
+venv/**
+.idea

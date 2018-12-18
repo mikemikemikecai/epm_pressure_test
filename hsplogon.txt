@@ -1,0 +1,47 @@
+http://192.168.60.125:19000/HyperionPlanning/servlet/HspLogOn
+
+request header:
+POST /HyperionPlanning/servlet/HspLogOn HTTP/1.1
+Host: 192.168.60.125:19000
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:63.0) Gecko/20100101 Firefox/63.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.7,zh-CN;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.60.125:19000/workspace/cache/2018-11-26_17-29-45/bpmstatic/thirdparty/bindows/html/blank.html?X-ORACLE-BPMUI-CSRF=F480765A50054A718427A038105888278BDE7D180E34E76CE7E097E46CEEBE50FBE917516DEC5880197EF08C0FFF660F6711AB2191410F151E344E331A7B98C9
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 650
+Connection: keep-alive
+Cookie: ORA_HP_MRUApplication=JSTI; ORA_HP_MRUUsername=admin; JSESSIONID=b70PcGQTCh2h47JLqDzkhQ1zNJ1pvGsgPMQsNx9LcfZZQ6vcJQGL!-602621212; ORA_EPMWS_User=admin; ORA_EPMWS_Locale=en_US; ORA_EPMWS_AccessibilityMode=false; ORA_EPMWS_ThemeSelection=Skyros; ORA_EPMWS_timeZone=-480
+Upgrade-Insecure-Requests: 1
+
+post data:
+isContained=true
+isWorkspace=true
+Application=JSTI
+moduleid=HyperionPlanning.planning.7
+sso_token=Uq2UqxRPantCsqw0+qjX5T4Cj/aykQVAbxIYgcAf54sIvH8BP23oH7uLE5L7WHH+7SNZ244oJoinABv6fMJJ4To2SPdQs+jN8huU2YlSAw1FIMHZg5JuDkj8tVQZF59hgMduS1fUg6ewA2j4ri00lKvsfqSCVd9ckXqK812Slud+K2aa5ydyQ6fs1ETaZPs1IwzqIqnQUJ9DaAUxaQIj3vNBHshyFckyeurBVlzFK2kIAR9rAZ+823wWpAJSQcguGjKydMGoACFdr/fe8E3XNLufejGLZEeofNRJQMuCIaYZRXWNmt6I/Q+qzbpIXL6/R1ELYIbZj+ESgGoZUP3kChX4ZJgg5MGYYKRLriozSsDU70hKFPHLwT1PPjC4xAG+bf07pDJNL2U9LaI/BsxjNori5R/1TcIRiNBEkxkC2hNxOGUkLx4YNCSR8lKKuG0e
+themeSelection=Skyros
+upk_available=false
+LOCALE_LANGUAGE=en_US
+useADF=true
+
+
+response header:
+HTTP/1.1 302 Moved Temporarily
+Date: Tue, 04 Dec 2018 11:55:25 GMT
+Server: Oracle-Application-Server-11g
+Location: /HyperionPlanning/LaunchPlanningCentral.jsp?Application=JSTI&useADF=true
+SET-COOKIE: ORA_HP_MRUApplication=JSTI;Version=0;Path=/HyperionPlanning/;Max-Age=32140800; HttpOnly
+ORA_HP_MRUUsername=admin;Version=0;Path=/HyperionPlanning/;Max-Age=32140800; HttpOnly
+X-ORACLE-DMS-ECID: 00iqgStRriR2nJWjLxATOA00015W0032ev
+X-Powered-By: Servlet/2.5 JSP/2.1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Keep-Alive: timeout=180, max=90
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+Content-Language: en
+
+
+
